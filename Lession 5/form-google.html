@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/9aec9406c1.js" crossorigin="anonymous"></script>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            background-color: #fff7ff;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            margin-left: 100px;
+            width: 300px;
+        }
+        i{
+            margin-top: 7.5px;
+            margin-left: 15px;
+            font-size: 15px;
+        }
+        .timkiem{
+            background-color: rgb(255, 255, 255);
+            width: 500px;
+            height: 30px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bóng */
+        }
+        .timkiem input{
+            margin-left: 5px;
+            width: 400px;
+            border: 0;
+            font-size: 13px;
+            line-height: 25px;
+            outline: none;   /* Tắt viền xanh */
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <img src="Lession 5/img/Screenshot 2025-08-13 at 12.30.58.png" alt="">
+    <div class="container">
+        <form action="https://www.google.com/search">
+            <div class="images">
+                <img src="https://github.com/nguyenhieu195/Code-Gym/blob/main/Lession%205/img/Screenshot%202025-08-13%20at%2012.30.58.png?raw=true" alt="">
+            </div><br>
+            <div class="timkiem">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Google or type a URL">
+            </div>
+        </form>
     </div>
 </body>
 </html>
