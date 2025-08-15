@@ -4,15 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid;
+      }
+      th,
+      td {
+        border: 1px solid;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <form action="">
         <table>
           <tr>
-            <th>
-                <label for="soTien">Amount</label>
-            </th>
+            <th>Amount</th>
             <th>From Currency</th>
             <th>To Currency</th>
             <th></th>
@@ -32,11 +43,14 @@
               </select>
             </td>
             <td>
-                <button type="button" onclick="DoiTien()" >Đổi tiền</button>
+              <button type="button" onclick="DoiTien()">Đổi tiền</button>
             </td>
           </tr>
+          <tr>
+            <td>Thành tiền</td>
+            <td><p id="trave"></p></td>
+          </tr>
         </table>
-        <p id="trave"></p>
       </form>
     </div>
   </body>

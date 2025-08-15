@@ -6,16 +6,16 @@ function DoiTien(){
     let ketqua;
 
     if(From == "USD" && To == "VND"){
-        ketqua = "Thành tiền: " + 23000 * giaTien + " VND";
+        ketqua = 23000 * giaTien + " VND";
     }
     else if(From == "VND" && To == "USD"){
-        ketqua = "Thành tiền: " + "$" + (giaTien / 23000);
+        ketqua = "$" + (giaTien / 23000);
     }
     else if(From == "VND" && To == "VND"){
-        ketqua = "Thành tiền: " + giaTien + " VND";
+        ketqua = giaTien + " VND";
     }
     else{
-        ketqua = "Thành tiền: " + "$" + giaTien;
+        ketqua = "$" + giaTien;
     }
     document.getElementById("trave").innerHTML = ketqua;
 }
