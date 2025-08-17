@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-diem">
+      <div class="nhapdiem">
+        Điểm toán:
+        <input
+          type="number"
+          name=""
+          id="diemtoan"
+          placeholder="Nhap diem toan cua ban"
+        />
+        Điểm lý: 
+        <input
+          type="number"
+          name=""
+          id="diemly"
+          placeholder="Nhap diem ly cua ban"
+        />
+        Điểm hoá: 
+        <input
+          type="number"
+          name=""
+          id="diemhoa"
+          placeholder="Nhap diem hoa cua ban"
+        />
+      </div>
+      <br />
+      <button type="button" onclick="tinhdiem()">Xem điểm trung bình</button> <label for=""id="diemtb"></label>
+    </div>
+  </body>
+  <script>
+    function tinhdiem(){
+      let dtoan = Number(document.getElementById('diemtoan').value);
+      let ly = Number(document.getElementById('diemly').value);
+      let hoa = Number(document.getElementById('diemhoa').value);
+
+      document.getElementById("diemtb").innerHTML = "Điểm trung bình của bạn là: " + ((dtoan + ly + hoa) / 3);
+    }
+  </script>
+</html>
+<!-- chương trình nhập điểm 3 môn toán lý hoá và tính điểm trung bình -->

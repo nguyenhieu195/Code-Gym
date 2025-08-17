@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="doC" placeholder="Nhập độ C" />
+    <button onclick="doinhietdo()">Đổi sang độ F</button>
+    <label for="" id="doF"></label>
+  </body>
+  <script>
+    function doinhietdo() {
+      let doC = Number(document.getElementById("doC").value);
+      document.getElementById("doF").innerHTML = ((doC * 1.8) + 32) + " Độ F";
+    }
+  </script>
+</html>
+<!-- chương trình chuyển đổi từ độ C sang độ F -->

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const PI = 3.14;
+    let r = prompt("Nhập bán kính hình tròn: ");
+    if (isNaN(r)) {
+      alert("Bán kính phải là số");
+    } else if (r <= 0) {
+      alert("Bán kính phải lớn hơn 0");
+    } else {
+      alert(`Chu vi hình tròn có bán kính ` + r + ` là: ` + 2 * PI * r);
+    }
+  </script>
+</html>
+<!-- Chương trình tính chu vi hình tròn -->
