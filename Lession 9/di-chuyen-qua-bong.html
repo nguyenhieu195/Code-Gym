@@ -7,7 +7,6 @@
     <style>
       img {
         width: 100px;
-        border: 1px solid;
       }
     </style>
   </head>
@@ -22,13 +21,11 @@
   </body>
   <script>
     // Khai báo biến toàn cục để lưu đối tượng hình ảnh
-    let images;
+    let images = document.getElementById("myImg");
+    let gocQuayBong = 0; // góc quay của bóng
 
     // Hàm khởi tạo khi trang vừa load xong
     function init() {
-      // Lấy thẻ <img> có id="myImg" từ trong HTML
-      images = document.getElementById("myImg");
-
       // Đặt vị trí của ảnh là relative để có thể thay đổi left/top
       images.style.position = "relative";
 
@@ -42,7 +39,10 @@
       // parseInt() chuyển "100px" → 100
       // Cộng thêm 100 → di chuyển thêm 100px
       // Sau đó ghép "px" để CSS hiểu
-      images.style.left = parseInt(images.style.left) + 100 + "px";
+      images.style.left = parseInt(images.style.left) + 10 + "px";
+
+      gocQuayBong += 40;
+      images.style.transform = "rotate(" + gocQuayBong + "deg)";
     }
 
     // Khi trang web load xong thì tự động gọi init()
