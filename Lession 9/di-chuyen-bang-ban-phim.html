@@ -13,11 +13,10 @@
       }
     </style>
   </head>
-  <body onload="chay()"> <!-- Khi trang load xong thì gọi hàm chay() -->
+  <body onload="docReady()"> <!-- Khi trang load xong thì gọi hàm chay() -->
     <img
       id="imge"
       src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
-      alt="Nobita"
     />
   </body>
   <script>
@@ -66,7 +65,7 @@
     }
 
     // Kích hoạt lắng nghe sự kiện bàn phím
-    function chay() {
+    function docReady() {
       window.addEventListener("keydown", xuLy);
     }
   </script>
