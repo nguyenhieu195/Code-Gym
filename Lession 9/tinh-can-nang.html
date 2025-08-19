@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Chỉ số cân nặng</h3>
+    <input type="text" name="" id="cannang" placeholder="Nhập cân nặng" />
+    <input
+      type="text"
+      name=""
+      id="chieucao"
+      placeholder="Nhập chiều cao cơ thể"
+    />
+    <button onclick="tinhBMI()">Select</button>
+    <p id="ketqua"></p>
+  </body>
+  <script>
+    function tinhBMI() {
+      let CanNang = Number(document.getElementById("cannang").value);
+      let ChieuCao = Number(document.getElementById("chieucao").value);
+      let BMI = parseFloat(CanNang / (ChieuCao * ChieuCao));
+      if (BMI >= 30.0) {
+        document.getElementById('ketqua').innerHTML = "BMI = " + BMI + " : Obese";
+      } else if (BMI >= 25.0) {
+        document.getElementById('ketqua').innerHTML = "BMI = " + BMI + " : Overweight";
+      } else if (BMI >= 18.5) {
+        document.getElementById('ketqua').innerHTML = "BMI = " + BMI + " : Normal";
+      } else if (BMI < 18.5) {
+        document.getElementById('ketqua').innerHTML = "BMI = " + BMI + " : Underweight";
+      }
+    }
+  </script>
+</html>
