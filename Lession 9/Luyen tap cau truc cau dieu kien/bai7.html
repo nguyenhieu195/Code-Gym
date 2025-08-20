@@ -91,31 +91,43 @@
       }
     });
 
+    let tienNoiHat = 0;
+    let tienNoiTinh = 0;
+    let tienLienTinh = 0;
+    let tienQuocTe = 0;
+
+    const CUOC_HANG_THANG = 20000;
     function noihat() {
       const CUOC_NOI_HAT = 600;
       let soPhut = document.getElementById("noihat").value;
-      let thanhtien = soPhut * CUOC_NOI_HAT;
-      document.getElementById("displayNoiHat").innerHTML = thanhtien + " VND";
+      tienNoiHat = soPhut * CUOC_NOI_HAT;
+      document.getElementById("displayNoiHat").innerHTML = tienNoiHat + " VND";
     }
     function noitinh() {
       const CUOC_NOI_TINH = 900;
       let soPhut = document.getElementById("noitinh").value;
-      let thanhtien = soPhut * CUOC_NOI_TINH;
-      document.getElementById("displayNoiTinh").innerHTML = thanhtien + " VND";
+      tienNoiTinh = soPhut * CUOC_NOI_TINH;
+      document.getElementById("displayNoiTinh").innerHTML =
+        tienNoiTinh + " VND";
     }
     function lientinh() {
       const CUOC_LIEN_TINH = 1500;
       let soPhut = document.getElementById("lientinh").value;
-      let thanhtien = soPhut * CUOC_LIEN_TINH;
-      document.getElementById("displayLienTinh").innerHTML = thanhtien + " VND";
+      tienLienTinh = soPhut * CUOC_LIEN_TINH;
+      document.getElementById("displayLienTinh").innerHTML =
+        tienLienTinh + " VND";
     }
     function quocte() {
       const CUOC_QUOC_TE = 4000;
       let soPhut = document.getElementById("quocte").value;
-      let thanhtien = soPhut * CUOC_QUOC_TE;
-      document.getElementById("displayQuocTe").innerHTML = thanhtien + " VND";
+      tienQuocTe = soPhut * CUOC_QUOC_TE;
+      document.getElementById("displayQuocTe").innerHTML = tienQuocTe + " VND";
     }
-    function result() {}
+    function result() {
+      let tongtien =
+        tienNoiHat + tienNoiTinh + tienLienTinh + tienQuocTe + CUOC_HANG_THANG;
+      document.getElementById("result").innerHTML = tongtien + " VND";
+    }
   </script>
 </html>
 <!-- Tính cước điện thoại cho một hộ gia đình dựa trên các thông số được cung cấp. -->
