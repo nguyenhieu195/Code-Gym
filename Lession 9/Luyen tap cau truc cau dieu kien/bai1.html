@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="num1" placeholder="Nhập số a" />
+    <input type="number" name="" id="num2" placeholder="Nhập số b" />
+    <button onclick="tinh()">Tính</button>
+  </body>
+  <script>
+    function tinh() {
+      let a = document.getElementById("num1").value;
+      let b = document.getElementById("num2").value;
+      if (b == 0) {
+        alert("số b phải khác 0 !");
+      } else if (a % b == 0) {
+        alert(a + " chia hết cho " + b + " và bằng: " + a / b);
+      } else {
+        alert(a + " không hết cho " + b + " và dư: " + (a % b));
+      }
+    }
+  </script>
+</html>
+<!-- Nhập hai số a và b, kiểm tra xem a có chia hết cho b hay không. -->

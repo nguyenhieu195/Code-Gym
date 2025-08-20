@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="num1" placeholder="Nhập số a" />
+    <input type="number" name="" id="num2" placeholder="Nhập số b" />
+    <input type="number" name="" id="num3" placeholder="Nhập số c" />
+    <button onclick="tinh()">Kiem tra</button>
+  </body>
+  <script>
+    function tinh() {
+      let a = document.getElementById("num1").value;
+      let b = document.getElementById("num2").value;
+      let c = document.getElementById("num3").value;
+
+      let max = a;
+
+      if (max < b) {
+        max = b;
+      }
+      if (max < c) {
+        max = c;
+      }
+
+      alert("so lon nhat la: " + max);
+    }
+  </script>
+</html>
+<!-- Nhập 3 số nguyên, tìm và in ra giá trị lớn nhất trong ba số đó. -->
