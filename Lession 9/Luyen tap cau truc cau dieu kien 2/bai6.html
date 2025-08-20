@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Giải phương trình bậc nhất (ax + b = 0)</h1>
+    <input type="number" id="a" placeholder="Nhập a" />
+    <input type="number" id="b" placeholder="Nhập b" />
+    <button onclick="phuongtrinh()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function phuongtrinh() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+      if (isNaN(a) || isNaN(b)) {
+        alert("a và b phải là số");
+      } else {
+        if (a == 0) {
+          alert("không phải phương trình bậc nhất !");
+        } else {
+          document.getElementById("display").innerHTML =
+            `Nghiệm của phương trình ${a}x + ${b} là: x = ` + -b / a;
+        }
+      }
+    }
+  </script>
+</html>
+<!-- Giải phuong trình bậc nhất -->
