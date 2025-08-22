@@ -1,0 +1,70 @@
+<!-- Viết chương trình tính thuế thu nhập cá nhân. 
+    Thuế suất lũy tiến từng phần (theo bậc)
+	•	0 – 5 triệu → 5%
+	•	Trên 5 – 10 triệu → 10%
+	•	Trên 10 – 18 triệu → 15%
+	•	Trên 18 – 32 triệu → 20%
+	•	Trên 32 – 52 triệu → 25%
+	•	Trên 52 – 80 triệu → 30%
+	•	Trên 80 triệu → 35%
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính thuế thu nhập cá nhân</h3>
+    <p>
+        Thuế suất lũy tiến từng phần (theo bậc) <br>
+        • 0 – 5 triệu → 5% <br>
+        • Trên 5 – 10 triệu → 10% <br>
+        • Trên 10 – 18 triệu → 15% <br>
+        • Trên 18 – 32 triệu → 20% <br>
+        • Trên 32 – 52 triệu → 25% <br>
+        • Trên 52 – 80 triệu → 30% <br>
+        • Trên 80 triệu → 35%
+    </p>
+
+    Nhập tiền nhu nhập cá nhân của bạn: <input type="text" name="" id="inp"> Triệu đồng <br>
+    <button onclick="tinh()">Tính</button>
+    <p id="display"></p>
+</body>
+<script>
+    function tinh() {
+        let tn = parseFloat(document.getElementById("inp").value);
+        if (isNaN(tn) || tn < 0) {
+            alert("Vui lòng nhập số tiền hợp lệ !");
+            return;
+        }
+
+        let thue = 0;
+        let bac = 1;
+
+        while (tn > 0) {
+            let muc, rate;
+
+            if (bac === 1) { muc = 5; rate = 0.05; }
+            else if (bac === 2) { muc = 5; rate = 0.10; }
+            else if (bac === 3) { muc = 8; rate = 0.15; }
+            else if (bac === 4) { muc = 14; rate = 0.20; }
+            else if (bac === 5) { muc = 20; rate = 0.25; }
+            else if (bac === 6) { muc = 28; rate = 0.30; }
+            else { muc = tn; rate = 0.35; }
+
+            let tinhThue = (tn > muc ? muc : tn) * rate;
+            thue += tinhThue;
+
+            tn -= muc;
+            bac++;
+        }
+
+        document.getElementById("display").innerHTML = `<b>Tổng thuế phải nộp: ${thue.toFixed(2)} triệu</b>`;
+    }
+</script>
+
+</html>
