@@ -1,0 +1,29 @@
+<!-- 
+    Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên. 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dem = 0;
+        let sum = 0;
+        let sumSau1 = 0;
+        let sumSau2 = 1;
+        document.writeln(sumSau1);
+        document.writeln(sumSau2);
+        dem = 2;
+        while(dem <= 20){
+            sum = sumSau1 + sumSau2;
+            sumSau1 = sumSau2;
+            sumSau2 = sum;
+            document.writeln(sum);
+            dem+=1;
+        }
+    </script>
+</body>
+</html>
