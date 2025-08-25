@@ -10,10 +10,6 @@ Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số
 
 Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
 
-Học viên tham khảo ứng dụng demo tại đây.
-
-Lưu ý: Không sao chép mã nguồn trong phần tham khảo, vì nó được cố ý giữ cho tệ hơn thường lệ.
-
 Bài 8: Game đoán số
 
 Nâng cấp game "Hãy thử đoán xem!"
