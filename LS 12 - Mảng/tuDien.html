@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Tieng Anh: <input type="text" name="" id="tanh" placeholder="Nhap tu muon dich sang Tieng Viet">
+    <button onclick="dichTA()">Dich</button>
+    Tieng Viet: <input type="text" name="" id="tviet" placeholder="Nhap tu muon dich sang Tieng Anh">
+    <button onclick="dichTV()">Dich</button>
+    <p id="result">Result: <br></p>
+</body>
+<script>
+    let arrAnh = ["hello", 'good bye', 'book', 'computer', 'table']
+    let arrViet = ['xin chao', 'tam biet', 'sach', 'may tinh', 'ban']
+    function dichTA() {
+        let tanh = document.getElementById('tanh').value.toLowerCase();
+        let indexTA = arrAnh.indexOf(tanh);
+
+        if (indexTA !== -1) {
+            document.getElementById('result').innerHTML += ` ${arrAnh[indexTA]} co nghia la: ${arrViet[indexTA]} <br>`
+        }
+        else {
+            document.getElementById('result').innerHTML += ` ${tanh} Khong co trong tu dien<br>`
+        }
+
+    }
+    function dichTV() {
+        let tviet = document.getElementById('tviet').value.toLowerCase();
+        let indexTV = arrViet.indexOf(tviet);
+
+        if (indexTV !== -1) {
+            document.getElementById('result').innerHTML += ` ${arrViet[indexTV]} co nghia la: ${arrAnh[indexTV]} <br>`
+        }
+        else{
+            document.getElementById('result').innerHTML += ` ${tviet} Khong co trong tu dien<br>`
+        }
+    }
+
+</script>
+
+</html>
