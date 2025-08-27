@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [-1, 3, 2, -5, 9, 4, 7, 10, 11, -2]
+        let V = 4;
+        let check = false
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == V) {
+                a.splice(i, 1)
+                a.push(0)
+                check = true
+                break
+            }
+        }
+        if(!check) {
+            document.writeln(V + ' is not in the array');
+        }
+        console.log(a)
+    </script>
+</body>
+</html>
+
+<!-- -Bài 7
+    Viết chương trình khởi tạo hoặc nhập vào một mảng số nguyên gồm 10 phần tử. 
+    Nhập hoặc tạo một phần tử số nguyên V. 
+    Chương trình kiểm tra xem V có thuộc mảng đã cho không.
+    Nếu V thuộc mảng, xóa V khỏi mảng (dịch các phần tử bên phải V sang vị trí của V và gán 0 cho phần tử cuối cùng của mảng). -->

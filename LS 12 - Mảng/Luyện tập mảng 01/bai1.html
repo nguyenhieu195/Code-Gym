@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n  = +prompt('nhap so phan tu co trong mang');
+        if(isNaN(n)){
+            alert("phan tu trong mang phai la so nguyen")
+        }else{
+            let a = []
+            for(let i = 0; i < n; i++){
+                a[i] = +prompt('nhap phan tu thu ' + (i + 1) + ": ")
+            }
+            let lonHon10 = 0;
+            let bang10 = 0
+            for(let i = 0; i < a.length; i++){
+                if(a[i] > 10){
+                    lonHon10 += 1;
+                }
+                if(a[i] == 10){
+                    bang10 += 1;
+                }
+            }
+            document.writeln(`co ${lonHon10} so lon hon 10 va co ${bang10} so bang 10`)
+        }
+
+    </script>
+</body>
+</html>
+<!-- -Bài 1
+    Viết chương trình khởi tạo một mảng số nguyên gồm 10 phần tử. 
+    Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10. -->
