@@ -38,7 +38,14 @@ class Den_Pin{
   }
 
   phatSang() {
-    if(this.pin.tra)
+    if (this.trangThai && this.pin.getNangLuong() > 0) {
+      console.log("Đèn đang phát sáng!");
+      this.pin.giamnangLuong();
+    } else if (!this.trangThai) {
+      console.log("Đèn đang tắt, không phát sáng!");
+    } else {
+      console.log("Pin yếu, đèn không thể phát sáng!");
+    }
   }
 
   batDen() {
@@ -55,3 +62,20 @@ class Den_Pin{
     console.log("đèn đã được tắt.");
   }
 }
+
+
+// Tạo pin và đèn pin
+let pin = new Pin(10);
+let den = new Den_Pin(false, pin);
+
+console.log(den.layThongTinPin());
+den.batDen();
+
+// Phát sáng 12 lần để kiểm tra trạng thái pin
+for(let i = 0; i < 12; i++) {
+  den.phatSang();
+  console.log(den.layThongTinPin());
+}
+
+den.tatDen();
+console.log(den.layThongTinPin());
