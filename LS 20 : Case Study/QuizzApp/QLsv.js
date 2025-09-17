@@ -84,7 +84,7 @@ let editingIndex = -1;
 
 // Hiển thị ra danh sách sinh viên ở bảng
 function hienThiSinhVien(){
-  const tBody = document.querySelector(#bangsinhvien tbody); // lấy phần body ở bảng
+  const tBody = document.querySelector('#bangsinhvien tbody'); // lấy phần body ở bảng
   tBody.innerHTML = "";
 
   danhSachSV.forEach((sv, index) => {
@@ -99,8 +99,8 @@ function hienThiSinhVien(){
       <td>${sv.getStd()}</td>
       <td>${sv.getGioiTinh()}</td>
       <td>
-        <button onclick="suaSV('index')">Sửa</button>
-        <button onclick="xoaSV('index')">Xoá</button>
+        <button onclick="suaSinhVien(${index})">Sửa</button>
+        <button onclick="xoaSinhVien(${index})">Xoá</button>
       </td>
       `;
 
@@ -131,7 +131,7 @@ function suaSinhVien(index){
   document.getElementById('quequan').value = sv.getQueQuan();
   document.getElementById('email').value = sv.getEmail();
   document.getElementById('sdt').value = sv.getStd();
-  document.getElementById('gioitinh').value = sv.getGioiTinh();
+  document.querySelector(`input[name='gioitinh'][value='${sv.getGioiTinh()}']`).checked = true;
 }
 
 // đảm bảo code JS chạy sau khi DOM có sẵn, tránh lỗi null khi truy cập các phần tử HTML. 
@@ -146,12 +146,16 @@ document.addEventListener("DOMContentLoaded", function(){
     
     const mssv = document.getElementById('mssv').value.trim();
     const hoten = document.getElementById('hoten').value.trim();
-    const chuyennganh = document.getElementById('chuyennganh').value.trim();
+    const chuyennganh = document.getElementById('chuyennganh').value;
     const ngaysinh = document.getElementById('ngaysinh').value.trim();
     const quequan = document.getElementById('quequan').value.trim();
     const email = document.getElementById('email').value.trim();
     const sdt = document.getElementById('sdt').value.trim();
-    const gioitinh = document.getElementById('gioitinh').value.trim();
+    const gioitinh = document.querySelector('input[name="gioitinh"]:checked').value;
+        if (!gioitinh) {
+      alert("Vui lòng chọn giới tính!");
+      return;
+    }
 
     const sv = new SinhVien(mssv, hoten, chuyennganh, ngaysinh, quequan, email, sdt, gioitinh);
 
@@ -162,11 +166,25 @@ document.addEventListener("DOMContentLoaded", function(){
       danhSachSV[editingIndex] = sv;
       editingIndex = -1;
       hienThiSinhVien();
-      
+
     }
 
     form.reset();
   });
 
+  timkiem.addEventListener('keyup', function(){
+  const keyword = timkiem.value.toLowerCase();
+    const rows = document.querySelectorAll('#bangsinhvien tbody tr');
 
+    rows.forEach(row => {
+  const mssv = row.cells[0].innerText.toLowerCase();
+  const hoten = row.cells[1].innerText.toLowerCase();
+
+  if(mssv.includes(keyword) || hoten.includes(keyword)) {
+        row.style.display = '';
+      }else{
+        row.style.display = "none";
+      }
+    })
+  })
 });
