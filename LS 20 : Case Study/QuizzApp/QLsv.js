@@ -1,4 +1,4 @@
-class sinhvien {
+class SinhVien {
   mssv;
   hoten;
   chuyennganh;
@@ -103,13 +103,70 @@ function hienThiSinhVien(){
         <button onclick="xoaSV('index')">Xoá</button>
       </td>
       `;
-      
-      
-  })
+
+      tBody.appendChild(row); // thêm hàng vào bảng
+
+  });
 }
 
 function themSinhVien(sv){
   danhSachSV.push(sv);
+  hienThiSinhVien();
 }
 
+function xoaSinhVien(index){
+  danhSachSV.splice(index, 1);
+  hienThiSinhVien();
+}
 
+function suaSinhVien(index){
+  const sv = danhSachSV[index];
+
+  editingIndex = index;
+
+  document.getElementById('mssv').value = sv.getMssv();
+  document.getElementById('hoten').value = sv.getHoten();
+  document.getElementById('chuyennganh').value = sv.getChuyenNganh();
+  document.getElementById('ngaysinh').value = sv.getNgaySinh();
+  document.getElementById('quequan').value = sv.getQueQuan();
+  document.getElementById('email').value = sv.getEmail();
+  document.getElementById('sdt').value = sv.getStd();
+  document.getElementById('gioitinh').value = sv.getGioiTinh();
+}
+
+// đảm bảo code JS chạy sau khi DOM có sẵn, tránh lỗi null khi truy cập các phần tử HTML. 
+// DOM là cầu nối giữa html js, 
+// nhờ nó js có thể truy cập, thay đổi, thêm hoặc xóa nội dung và cấu trúc của trang web.
+document.addEventListener("DOMContentLoaded", function(){  
+  const form = document.getElementById("themsinhvien");
+  const timkiem = document.getElementById('timkiem');
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    const mssv = document.getElementById('mssv').value.trim();
+    const hoten = document.getElementById('hoten').value.trim();
+    const chuyennganh = document.getElementById('chuyennganh').value.trim();
+    const ngaysinh = document.getElementById('ngaysinh').value.trim();
+    const quequan = document.getElementById('quequan').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const sdt = document.getElementById('sdt').value.trim();
+    const gioitinh = document.getElementById('gioitinh').value.trim();
+
+    const sv = new SinhVien(mssv, hoten, chuyennganh, ngaysinh, quequan, email, sdt, gioitinh);
+
+    if(editingIndex === -1){
+      themSinhVien(sv);
+
+    }else{
+      danhSachSV[editingIndex] = sv;
+      editingIndex = -1;
+      hienThiSinhVien();
+      
+    }
+
+    form.reset();
+  });
+
+
+});
