@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tieude">
+            <a href="index.html">Quản lí Sinh Viên</a>
+            <a href="danhsachSV.html">Danh sách sinh viên</a>
+        </div>
+        <form class="qlSinhVien" id="themsinhvien">
+            <h1>Quản lí Sinh Viên</h1>
+
+            <div class="themsinhvien">
+                <table>
+                    <tr>
+                        <td>Mã số sinh viên: </td>
+                        <td><input class="inp" type="text" name="" id="mssv" required></td>
+                    </tr>
+                    <tr>
+                        <td>Họ và tên: </td>
+                        <td><input class="inp" type="text" name="" id="hoten" required></td>
+                    </tr>
+                    <tr>
+                        <td>Chuyên ngành:</td>
+                        <td><select name="" id="chuyennganh" required>
+                                <option value="">Chọn chuyên ngành</option>
+                                <option value="cntt">Công nghệ thông tin</option>
+                                <option value="khmt">Khoa học máy tính</option>
+                                <option value="qtkd">Quản trị kinh doanh</option>
+                                <option value="mkt">Marketing</option>
+                                <option value="log">Logistics</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày sinh: </td>
+                        <td><input class="inp" type="date" name="" id="ngaysinh" required></td>
+                    </tr>
+                    <tr>
+                        <td>Quê quán: </td>
+                        <td><input class="inp" type="text" name="" id="quequan" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input class="inp" type="text" name="" id="email" required
+                                pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" title="Email phải có @ và đúng định dạng"></td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại: </td>
+                        <td><input class="inp" type="text" name="" id="sdt" required pattern="^[0-9]{10,11}$"
+                                title="Số điện thoại chỉ được nhập số và từ 10-11 chữ số"></td>
+                    </tr>
+                    <tr>
+                        <td>Giới tính: </td>
+                        <td>
+                            <input type="radio" name="gioitinh" value="Nam" required>Nam
+                            <input type="radio" name="gioitinh" value="Nữ">Nữ
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Thêm sinh viên" style="color: white;"></input>
+                <input type="reset" value="Huỷ" style="background-color: rgb(226, 67, 67); color: white;"></input>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="QLsv.js"></script>
+
+</html>

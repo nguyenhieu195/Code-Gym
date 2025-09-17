@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí Sinh Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #3b8ff6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th {
+            background: #3b8ff6;
+            color: white;
+        }
+        td, th {
+            padding: 8px;
+            text-align: center;
+        }
+        .inp, select {
+            width: 95%;
+            padding: 5px;
+        }
+        .btn {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn input {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn input[type="submit"] {
+            background-color: #3b8ff6;
+            color: white;
+        }
+        .btn input[type="reset"] {
+            background-color: red;
+            color: white;
+        }
+        button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.edit {
+            background: orange;
+            color: white;
+        }
+        button.delete {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Quản lí Sinh Viên</h1>
+
+    <!-- Form nhập sinh viên -->
+    <form class="qlSinhVien">
+        <table>
+            <tr>
+                <td>MSSV:</td>
+                <td><input class="inp" type="text" id="mssv" required></td>
+            </tr>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input class="inp" type="text" id="hoten" required></td>
+            </tr>
+            <tr>
+                <td>Chuyên ngành:</td>
+                <td>
+                    <select id="nganh" required>
+                        <option value="">Chọn chuyên ngành</option>
+                        <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                        <option value="Khoa học máy tính">Khoa học máy tính</option>
+                        <option value="Quản trị kinh doanh">Quản trị kinh doanh</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Logistics">Logistics</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Ngày sinh:</td>
+                <td><input class="inp" type="date" id="ngaysinh" required></td>
+            </tr>
+            <tr>
+                <td>Quê quán:</td>
+                <td><input class="inp" type="text" id="quequan" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input class="inp" type="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>SĐT:</td>
+                <td><input class="inp" type="text" id="sdt" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính:</td>
+                <td>
+                    <input type="radio" name="gioitinh" id="gtNam" value="Nam" required> Nam
+                    <input type="radio" name="gioitinh" id="gtNu" value="Nữ"> Nữ
+                </td>
+            </tr>
+        </table>
+        <div class="btn">
+            <input type="submit" value="Thêm sinh viên">
+            <input type="reset" value="Huỷ">
+        </div>
+    </form>
+
+    <!-- Danh sách sinh viên -->
+    <h1>Danh sách sinh viên</h1>
+    <table id="bangSinhVien">
+        <thead>
+        <tr>
+            <th>MSSV</th>
+            <th>Họ tên</th>
+            <th>Ngành</th>
+            <th>Ngày sinh</th>
+            <th>Quê quán</th>
+            <th>Email</th>
+            <th>SĐT</th>
+            <th>Giới tính</th>
+            <th>Hành động</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const form = document.querySelector(".qlSinhVien");
+    const tbody = document.querySelector("#bangSinhVien tbody");
+    let editingRow = null;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const mssv = document.getElementById("mssv").value;
+        const hoten = document.getElementById("hoten").value;
+        const nganh = document.getElementById("nganh").value;
+        const ngaysinh = document.getElementById("ngaysinh").value;
+        const quequan = document.getElementById("quequan").value;
+        const email = document.getElementById("email").value;
+        const sdt = document.getElementById("sdt").value;
+        const gioitinh = document.getElementById("gtNam").checked ? "Nam" : "Nữ";
+
+        if (editingRow) {
+            // cập nhật thông tin sinh viên đang sửa
+            editingRow.cells[0].innerText = mssv;
+            editingRow.cells[1].innerText = hoten;
+            editingRow.cells[2].innerText = nganh;
+            editingRow.cells[3].innerText = ngaysinh;
+            editingRow.cells[4].innerText = quequan;
+            editingRow.cells[5].innerText = email;
+            editingRow.cells[6].innerText = sdt;
+            editingRow.cells[7].innerText = gioitinh;
+            editingRow = null;
+            form.querySelector("input[type=submit]").value = "Thêm sinh viên";
+        } else {
+            // thêm mới sinh viên
+            const row = tbody.insertRow();
+            row.insertCell(0).innerText = mssv;
+            row.insertCell(1).innerText = hoten;
+            row.insertCell(2).innerText = nganh;
+            row.insertCell(3).innerText = ngaysinh;
+            row.insertCell(4).innerText = quequan;
+            row.insertCell(5).innerText = email;
+            row.insertCell(6).innerText = sdt;
+            row.insertCell(7).innerText = gioitinh;
+
+            const actions = row.insertCell(8);
+            actions.innerHTML = `
+                <button class="edit" onclick="editRow(this)">Sửa</button>
+                <button class="delete" onclick="deleteRow(this)">Xoá</button>
+            `;
+        }
+        form.reset();
+    });
+
+    function deleteRow(btn) {
+        if (confirm("Bạn có chắc muốn xoá sinh viên này?")) {
+            btn.parentElement.parentElement.remove();
+        }
+    }
+
+    function editRow(btn) {
+        editingRow = btn.parentElement.parentElement;
+        document.getElementById("mssv").value = editingRow.cells[0].innerText;
+        document.getElementById("hoten").value = editingRow.cells[1].innerText;
+        document.getElementById("nganh").value = editingRow.cells[2].innerText;
+        document.getElementById("ngaysinh").value = editingRow.cells[3].innerText;
+        document.getElementById("quequan").value = editingRow.cells[4].innerText;
+        document.getElementById("email").value = editingRow.cells[5].innerText;
+        document.getElementById("sdt").value = editingRow.cells[6].innerText;
+        if (editingRow.cells[7].innerText === "Nam") {
+            document.getElementById("gtNam").checked = true;
+        } else {
+            document.getElementById("gtNu").checked = true;
+        }
+        form.querySelector("input[type=submit]").value = "Cập nhật";
+    }
+</script>
+</body>
+</html>
