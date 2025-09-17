@@ -121,3 +121,11 @@ input[type="radio"] {
   accent-color: #3b82f6;
   margin-right: 4px;
 }
+
+.dsSinhVien table{
+  border-collapse: collapse;
+}
+.dsSinhVien{
+  width: 90%;
+
+}

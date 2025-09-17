@@ -1,77 +1,115 @@
-let students = JSON.parse(localStorage.getItem("students")) || [];
+class sinhvien {
+  mssv;
+  hoten;
+  chuyennganh;
+  ngaysinh;
+  quequan;
+  email;
+  sdt;
+  gioitinh;
 
-const form = document.getElementById("themsinhvien");
-const tbody = document.querySelector("#bangsinhvien tbody");
-let editingRow = null;
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Khi bấm “Thêm sinh viên”, trình duyệt không reload lại trang
-
-  const mssv = document.getElementById("mssv").value.trim(); // trim() : là hàm chuỗi (string method) dùng để xóa bỏ khoảng trắng ở đầu và cuối chuỗi.
-  const hoten = document.getElementById("hoten").value.trim();
-  const chuyennganh = document.getElementById("chuyennganh").value;
-  const ngaysinh = document.getElementById("ngaysinh").value;
-  const quequan = document.getElementById("quequan").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const sodt = document.getElementById("sdt").value.trim();
-  const gioitinh = document.querySelector(
-    "input[name='gioitinh']:checked"
-  ).value;
-
-  if (editingRow) {
-    // sửa thong tin sinh viên
-    editingRow.cells[0].innerText = mssv;
-    editingRow.cells[1].innerText = hoten;
-    editingRow.cells[2].innerText = chuyennganh;
-    editingRow.cells[3].innerText = ngaysinh;
-    editingRow.cells[4].innerText = quequan;
-    editingRow.cells[5].innerText = email;
-    editingRow.cells[6].innerText = sodt;
-    editingRow.cells[7].innerText = gioitinh;
-
-    editingRow = null;
-    form.querySelector("input[type='submit']").value = "Thêm sinh viên";
-  } else {
-    //Thêm sinh viên mới
-    const row = tbody.insertRow();
-
-    row.insertCell(0).innerText = mssv;
-    row.insertCell(1).innerText = hoten;
-    row.insertCell(2).innerText = chuyennganh;
-    row.insertCell(3).innerText = ngaysinh;
-    row.insertCell(4).innerText = quequan;
-    row.insertCell(5).innerText = email;
-    row.insertCell(6).innerText = sodt;
-    row.insertCell(7).innerText = gioitinh;
-
-    // nút hành động
-    const actions = row.insertCell(8);
-    actions.innerHTML = `<button onclick="editRow(this)">Sửa</button> <button onclick="deleteRow(this)">Xoá</button>`;
+  constructor(
+    mssv,
+    hoten,
+    chuyennganh,
+    ngaysinh,
+    quequan,
+    email,
+    sdt,
+    gioitinh
+  ) {
+    this.mssv = mssv;
+    this.chuyennganh = chuyennganh;
+    this.hoten = hoten;
+    this.ngaysinh = ngaysinh;
+    this.quequan = quequan;
+    this.email = email;
+    this.sdt = sdt;
+    this.gioitinh = gioitinh;
   }
 
-  form.reset();
-});
+  setMssv(mssv) {
+    this.mssv = mssv;
+  }
+  setHoTen(hoten) {
+    this.hoten = hoten;
+  }
+  setChuyenNganh(chuyennganh) {
+    this.chuyennganh = chuyennganh;
+  }
+  setNgaySinh(ngaysinh) {
+    this.ngaysinh = ngaysinh;
+  }
+  setQueQuan(quequan) {
+    this.quequan = quequan;
+  }
+  setEmail(email) {
+    this.email = email;
+  }
+  setSdt(sdt) {
+    this.sdt = sdt;
+  }
+  setGioiTinh(gioitinh) {
+    this.gioitinh = gioitinh;
+  }
 
-function deleteRow(btn) {
-  if (confirm("Bạn có chắc muốn xoá sinh viên này ?")) {
-    btn.parentElement.parentElement.remove(); // → lấy thẻ ông (cha của cha) của btn.
-    // <td> -> <tr>
+  getMssv() {
+    return this.mssv;
+  }
+  getHoten() {
+    return this.hoten;
+  }
+  getChuyenNganh() {
+    return this.chuyennganh;
+  }
+  getNgaySinh() {
+    return this.ngaysinh;
+  }
+  getQueQuan() {
+    return this.quequan;
+  }
+  getEmail() {
+    return this.email;
+  }
+  getStd() {
+    return this.sdt;
+  }
+  getGioiTinh() {
+    return this.gioitinh;
   }
 }
+ 
+let danhSachSV = [];
+let editingIndex = -1;
 
-function editRow(btn) {
-  editingRow = btn.parentElement.parentElement;
+// Hiển thị ra danh sách sinh viên ở bảng
+function hienThiSinhVien(){
+  const tBody = document.querySelector(#bangsinhvien tbody); // lấy phần body ở bảng
+  tBody.innerHTML = "";
 
-  document.getElementById("mssv").value = editingRow.cells[0].innerText;
-  document.getElementById("hoten").value = editingRow.cells[1].innerText;
-  document.getElementById("chuyennganh").value = editingRow.cells[2].innerText;
-  document.getElementById("ngaysinh").value = editingRow.cells[3].innerText;
-  document.getElementById("quequan").value = editingRow.cells[4].innerText;
-  document.getElementById("email").value = editingRow.cells[5].innerText;
-  document.getElementById("sdt").value = editingRow.cells[6].innerText;
-
-  const gt = editingRow.cells[7].innerText;
-  document.querySelector(`input[name='gioitinh'][value='${gt}']`).checked = true;
-
-  form.querySelector(`input[type='submit']`).value = "Cập nhật";
+  danhSachSV.forEach((sv, index) => {
+    const row = document.createElement('tr'); // tạo 1 hàng
+    row.innerHTML = `
+      <td>${sv.getMssv()}</td>
+      <td>${sv.getHoten()}</td>
+      <td>${sv.getChuyenNganh()}</td>
+      <td>${sv.getNgaySinh()}</td>
+      <td>${sv.getQueQuan()}</td>
+      <td>${sv.getEmail()}</td>
+      <td>${sv.getStd()}</td>
+      <td>${sv.getGioiTinh()}</td>
+      <td>
+        <button onclick="suaSV('index')">Sửa</button>
+        <button onclick="xoaSV('index')">Xoá</button>
+      </td>
+      `;
+      
+      
+  })
 }
+
+function themSinhVien(sv){
+  danhSachSV.push(sv);
+}
+
+
