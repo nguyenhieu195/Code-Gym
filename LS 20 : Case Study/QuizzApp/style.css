@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: "Segoe UI", "Roboto", Arial, sans-serif;
   background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  min-height: 100vh;
+  min-height: 500vh;
 }
 
 .container {
@@ -34,6 +34,8 @@ body {
   font-weight: bold;
   margin-right: 20px;   
   transition: 0.3s;
+  border: none;
+  background-color: #3b82f6;
 }
 
 .qlSinhVien {
@@ -117,31 +119,34 @@ body {
 
 input[type="radio"] {
   accent-color: #3b82f6;
-  margin-right: 4px;
+  margin-right: 3px;
 }
 
-.dsSinhVien table{
+.danhSachSV h1{
+  color: #3b82f6;
+}
+.danhSachSV table{
   border-collapse: collapse;
 }
-.dsSinhVien th{
+.danhSachSV th{
   background-color: #3b82f6;
   color: white;
   height: 40px;
   font-size: 15px;
   border: 1px solid white;
 }
-.dsSinhVien td{
+.danhSachSV td{
   height: 30px;
   font-size: 15px; 
 }
-.dsSinhVien button{
+.danhSachSV button{
   border: none;
   width: 50px;
   height: 30px;
   font-size: 15px; 
   color: white;
 }
-.dsSinhVien{
+.danhSachSV{
   width: 90%;
 
 }
