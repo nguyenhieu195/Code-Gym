@@ -78,17 +78,17 @@ class SinhVien {
     return this.gioitinh;
   }
 }
- 
+
 let danhSachSV = [];
 let editingIndex = -1;
 
 // Hiển thị ra danh sách sinh viên ở bảng
-function hienThiSinhVien(){
-  const tBody = document.querySelector('#bangsinhvien tbody'); // lấy phần body ở bảng
-  tBody.innerHTML = "";
+function hienThiSinhVien() {
+  const tBody = document.querySelector("#bangsinhvien tbody"); // lấy phần body ở bảng
+  tBody.innerHTML = ""; // xbooọ nội dung cũ để hiển thị lại
 
   danhSachSV.forEach((sv, index) => {
-    const row = document.createElement('tr'); // tạo 1 hàng
+    const row = document.createElement("tr"); // tạo 1 hàng
     row.innerHTML = `
       <td>${sv.getMssv()}</td>
       <td>${sv.getHoten()}</td>
@@ -104,84 +104,94 @@ function hienThiSinhVien(){
       </td>
       `;
 
-      tBody.appendChild(row); // thêm hàng vào bảng
-
+    tBody.appendChild(row); // thêm hàng vào bảng
   });
 }
 
-function themSinhVien(sv){
+function themSinhVien(sv) {
   danhSachSV.push(sv);
   hienThiSinhVien();
 }
 
-function xoaSinhVien(index){
+function xoaSinhVien(index) {
   danhSachSV.splice(index, 1);
   hienThiSinhVien();
 }
 
-function suaSinhVien(index){
+function suaSinhVien(index) {
   const sv = danhSachSV[index];
 
   editingIndex = index;
 
-  document.getElementById('mssv').value = sv.getMssv();
-  document.getElementById('hoten').value = sv.getHoten();
-  document.getElementById('chuyennganh').value = sv.getChuyenNganh();
-  document.getElementById('ngaysinh').value = sv.getNgaySinh();
-  document.getElementById('quequan').value = sv.getQueQuan();
-  document.getElementById('email').value = sv.getEmail();
-  document.getElementById('sdt').value = sv.getStd();
-  document.querySelector(`input[name='gioitinh'][value='${sv.getGioiTinh()}']`).checked = true;
+  document.getElementById("mssv").value = sv.getMssv();
+  document.getElementById("hoten").value = sv.getHoten();
+  document.getElementById("chuyennganh").value = sv.getChuyenNganh();
+  document.getElementById("ngaysinh").value = sv.getNgaySinh();
+  document.getElementById("quequan").value = sv.getQueQuan();
+  document.getElementById("email").value = sv.getEmail();
+  document.getElementById("sdt").value = sv.getStd();
+  document.querySelector(
+    `input[name='gioitinh'][value='${sv.getGioiTinh()}']`
+  ).checked = true;
 }
 
-document.addEventListener("DOMContentLoaded", function(){  
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("themsinhvien");
-  const timkiem = document.getElementById('timkiem');
+  const timkiem = document.getElementById("timkiem");
 
-  form.addEventListener("submit", function(e){
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    
-    const mssv = document.getElementById('mssv').value.trim();
-    const hoten = document.getElementById('hoten').value.trim();
-    const chuyennganh = document.getElementById('chuyennganh').value;
-    const ngaysinh = document.getElementById('ngaysinh').value.trim();
-    const quequan = document.getElementById('quequan').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const sdt = document.getElementById('sdt').value.trim();
-    const gioitinh = document.querySelector('input[name="gioitinh"]:checked').value;
-        if (!gioitinh) {
+
+    const mssv = document.getElementById("mssv").value.trim();
+    const hoten = document.getElementById("hoten").value.trim();
+    const chuyennganh = document.getElementById("chuyennganh").value;
+    const ngaysinh = document.getElementById("ngaysinh").value.trim();
+    const quequan = document.getElementById("quequan").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const sdt = document.getElementById("sdt").value.trim();
+    const gioitinh = document.querySelector(
+      'input[name="gioitinh"]:checked'
+    ).value;
+    if (!gioitinh) {
       alert("Vui lòng chọn giới tính!");
       return;
     }
 
-    const sv = new SinhVien(mssv, hoten, chuyennganh, ngaysinh, quequan, email, sdt, gioitinh);
-    console.log("index: ", editingIndex);
-    if(editingIndex === -1){
-      themSinhVien(sv);
+    const sv = new SinhVien(
+      mssv,
+      hoten,
+      chuyennganh,
+      ngaysinh,
+      quequan,
+      email,
+      sdt,
+      gioitinh
+    );
 
-    }else{
+    if (editingIndex === -1) {
+      themSinhVien(sv);
+    } else {
       danhSachSV[editingIndex] = sv;
       editingIndex = -1;
       hienThiSinhVien();
-
     }
 
     form.reset();
   });
 
-  timkiem.addEventListener('keyup', function(){
-  const keyword = timkiem.value.toLowerCase();
-    const rows = document.querySelectorAll('#bangsinhvien tbody tr');
+  timkiem.addEventListener("keyup", function () {
+    const keyword = timkiem.value.toLowerCase();
+    const rows = document.querySelectorAll("#bangsinhvien tbody tr");
 
-    rows.forEach(row => {
-  const mssv = row.cells[0].innerText.toLowerCase();
-  const hoten = row.cells[1].innerText.toLowerCase();
+    rows.forEach((row) => {
+      const mssv = row.cells[0].innerText.toLowerCase();
+      const hoten = row.cells[1].innerText.toLowerCase();
 
-  if(mssv.includes(keyword) || hoten.includes(keyword)) {
-        row.style.display = '';
-      }else{
+      if (mssv.includes(keyword) || hoten.includes(keyword)) {
+        row.style.display = "";
+      } else {
         row.style.display = "none";
       }
-    })
-  })
+    });
+  });
 });
