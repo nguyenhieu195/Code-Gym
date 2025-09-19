@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 
-  timkiem.addEventListener("keyup", function () {
+  timkiem.addEventListener("input", function () {
     const keyword = timkiem.value.toLowerCase();
     const rows = document.querySelectorAll("#bangsinhvien tbody tr");
 
