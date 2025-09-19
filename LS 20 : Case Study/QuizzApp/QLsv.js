@@ -99,8 +99,8 @@ function hienThiSinhVien(){
       <td>${sv.getStd()}</td>
       <td>${sv.getGioiTinh()}</td>
       <td>
-        <button onclick="suaSinhVien(${index})">Sửa</button>
-        <button onclick="xoaSinhVien(${index})">Xoá</button>
+        <button style="background-color: #58a9ffff" onclick="suaSinhVien(${index})">Sửa</button>
+        <button style="background-color: #fd4141ff" onclick="xoaSinhVien(${index})">Xoá</button>
       </td>
       `;
 
@@ -134,9 +134,6 @@ function suaSinhVien(index){
   document.querySelector(`input[name='gioitinh'][value='${sv.getGioiTinh()}']`).checked = true;
 }
 
-// đảm bảo code JS chạy sau khi DOM có sẵn, tránh lỗi null khi truy cập các phần tử HTML. 
-// DOM là cầu nối giữa html js, 
-// nhờ nó js có thể truy cập, thay đổi, thêm hoặc xóa nội dung và cấu trúc của trang web.
 document.addEventListener("DOMContentLoaded", function(){  
   const form = document.getElementById("themsinhvien");
   const timkiem = document.getElementById('timkiem');
@@ -158,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     const sv = new SinhVien(mssv, hoten, chuyennganh, ngaysinh, quequan, email, sdt, gioitinh);
-
+    console.log("index: ", editingIndex);
     if(editingIndex === -1){
       themSinhVien(sv);
 

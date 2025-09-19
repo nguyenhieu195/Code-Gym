@@ -24,10 +24,8 @@ body {
   margin-bottom: 20px;
   display: flex;
 }
-.tieude a:hover {
-  color: rgb(197, 0, 0);              /* màu khi di chuột vào */
-}
-.tieude a {
+
+.tieude p {
   text-decoration: none;
   margin: 0; 
   font-size: 2rem;
@@ -52,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 24px 24px 24px;
+  padding: 32px 24px 0px 24px;
 }
 
 .qlSinhVien h1 {
@@ -124,6 +122,24 @@ input[type="radio"] {
 
 .dsSinhVien table{
   border-collapse: collapse;
+}
+.dsSinhVien th{
+  background-color: #3b82f6;
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid white;
+}
+.dsSinhVien td{
+  height: 30px;
+  font-size: 15px; 
+}
+.dsSinhVien button{
+  border: none;
+  width: 50px;
+  height: 30px;
+  font-size: 15px; 
+  color: white;
 }
 .dsSinhVien{
   width: 90%;
