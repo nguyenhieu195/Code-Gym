@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <input type="text" name="" id="mamay" placeholder="ma may">
+    <input type="text" name="" id="tenmay" placeholder="ten may">
+    <input type="text" name="" id="hangsx" placeholder="hang san xuat">
+    <input type="text" name="" id="giaban" placeholder="gia ban"> -->
+
+    <script>
+
+        class MayTinh {
+            mamay;
+            tenmay;
+            hangsanxuat;
+            giaban;
+
+            constructor(mamay, tenmay, hangsanxuat, giaban) {
+                this.mamay = mamay;
+                this.tenmay = tenmay;
+                this.hangsanxuat = hangsanxuat;
+                this.giaban = giaban;
+            }
+
+            setMaMay(mamay) {
+                this.mamay = mamay;
+            }
+            getMaMay() {
+                return this.mamay;
+            }
+
+            setTenMay(tenmay) {
+                this.tenmay = tenmay;
+            }
+            getTenMay() {
+                return this.tenmay;
+            }
+
+            setHangSanXuat(hangsanxuat) {
+                this.hangsanxuat = hangsanxuat;
+            }
+            getHangSanXuat() {
+                return this.hangsanxuat;
+            }
+
+            setGiaBan(giaban) {
+                this.giaban = giaban;
+            }
+            getGiaBan() {
+                return this.giaban;
+            }
+
+            toString() {
+                return `May Tinh [Ma may: ${this.mamay}, Ten may: ${this.tenmay}, Hang san xuat: ${this.hangsanxuat}, Gia ban: ${this.giaban}]`;
+            }
+        }
+
+        let dsMayTinh = [];
+
+        function themMt(maytinh) {
+            dsMayTinh.push(maytinh);
+        }
+
+        function hienthiMayTinh() {
+            let hienthi = '';
+            for (let i = 0; i < dsMayTinh.length; i++) {
+                hienthi += dsMayTinh[i].toString() + "<br>";
+            }
+
+            document.writeln(hienthi);
+        }
+
+        function sapxepTheogia(){
+            for(let i = 0; i < dsMayTinh.length; i++){
+                for(let j = 0; j < dsMayTinh.length; j++){
+                    if(dsMayTinh[i].getGiaBan() > dsMayTinh[j].getGiaBan()){
+                        let temp = dsMayTinh[i];
+                        dsMayTinh[i] = dsMayTinh[j];
+                        dsMayTinh[j] = temp;
+                    }
+                }
+            }
+        }
+        let mamay = document.getElementById("mamay");
+        let tenmay = document.getElementById("tenmay");
+        let hangsx = document.getElementById("hangsx");
+        let giaban = document.getElementById("giaban");
+
+        let may1 = new MayTinh(11, 'iphone', 'apple', 15000);
+        let may2 = new MayTinh(5, 'oppo', 'op', 10000);
+        let may3 = new MayTinh(17, 'nokia', 'no', 5000);
+        let may4 = new MayTinh(14, 'samsung', 'sam', 20000);
+        dsMayTinh.push(may1);
+        dsMayTinh.push(may2);
+        dsMayTinh.push(may3);
+        dsMayTinh.push(may4);
+        hienthiMayTinh();
+
+        document.writeln('may sinh sau khi sap xep <br>');
+        sapxepTheogia();
+
+        hienthiMayTinh();
+
+        console.log(dsMayTinh);
+    </script>
+</body>
+
+</html>
