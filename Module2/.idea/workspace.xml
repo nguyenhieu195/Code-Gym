@@ -4,216 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78ed1bfb-0067-4c10-8691-23225868f809" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ChungChi/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ChungChi/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ChungChi/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ChungChi/Chng_ch_kho_hc.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ChungChi/_Chng_ch_hon_thnh_kha_hc.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan1/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan1/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan1/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan1/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan2/b1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan2/b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan2/b3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/DeThiThu/onlan2/b4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 1/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 1/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 1/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 1/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 1/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Luyện tập 2/bai9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Số nguyên tố/ktraSNT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/Số nguyên tố/snt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS14_15_Func/bai-soan.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Adam - Eva/Adam-Eva.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Adam - Eva/scrip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Adam-Eva.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Hình chữ nhật/hinhChuNhat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Hình chữ nhật/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/OOP.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/OOP2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/hinhChuNhat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/nhietDo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Đèn pin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS16_17_OOP/Đèn pin/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/Quan Ly Sinh Vien/QLsv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/Quan Ly Sinh Vien/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/Quan Ly Sinh Vien/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/QuanLy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/ex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/haha.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS20_CaseStudy/quiz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/bai soan.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/bangCuuChuong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện for/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện for/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/b1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/b3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/b5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/bai8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 1/bài tập" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 2/câu hỏi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 2/hinhChuNhat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 2/tamGiac.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/luyện tập vòng lặp 2/tinhGiaiThua.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_10_VongLap/soNguyenTo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai8.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/bai9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 01/baitap.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Luyện tập mảng 02/baitap.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Sử dụng hàm có sẵn của mảng/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Sử dụng hàm có sẵn của mảng/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/Sử dụng hàm có sẵn của mảng/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/addArray.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/bai soan.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/cacHamCoSanCuaMang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/daoNguocMang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/demoArray.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/inputCoDinh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/timMax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/timX.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_12 _13_Array/tuDien.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Dự đoán .png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Số lớn nhất trong dãy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Trung bình.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Xếp loại điểm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/số lớn nhất.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Đổi nhiệt độ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_3/Đổi tiền.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_4/cv.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_4/danhSach.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/Bài soạn 2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-chess.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-dangKiNguoiDung.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-donGian.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-google.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form-survayKhachHang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/img/Screenshot 2025-08-13 at 13.14.42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/img/Screenshot 2025-08-13 at 14.07.35-Photoroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/post-get.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/select-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/table-coban.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_5/thoiKhoaBieuV1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_6/index4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/bai-soan.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/bai-tap-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/bai-tap-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/bai-tap-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/bai-tap-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/doi-tien/chuyen-doi-tien-te.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/doi-tien/chuyen-doi-tien-te.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/khai-bao-va-su-dung-bien.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/khai-bao-va-su-dung-bien.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/ma-tinh-v2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/ma-tinh-v2/may-tinh.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/ma-tinh-v2/may-tinh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/ma-tinh-v2/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/may-tinh/may-tinh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/may-tinh/may-tinh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/su-dung-toan-tu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_7/su-dung-toan-tu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/bài soạn/bai-soan.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyen tap if else/b1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyen tap if else/b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyen tap switch-case/b1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyen tap switch-case/b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyện tập toán tử 3 ngôi/b1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/luyện tập toán tử 3 ngôi/b2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_8/tinh-nam-nhuan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai12.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien 2/bai9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/Luyen tap cau truc cau dieu kien/bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/di-chuyen-bang-ban-phim.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/di-chuyen-qua-bong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/gam-vui.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/tinh-can-nang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/LS_9/tinh-ngay-cua-thang.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ThiThucHanh/cau1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ThiThucHanh/cau2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ThiThucHanh/cau3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_1/ThiThucHanh/cau3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.github/copilot-instructions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.idea/CODE-GYM.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/BaiSoan/BaiSoan1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/MODULE_2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/.idea/Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/PJ1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/src/IntroductionToJava/ChuyenDoiTien.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/src/IntroductionToJava/DisplayByYourName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/src/IntroductionToJava/DocSo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/Project/PJ1/src/ss2/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/out/production/MODULE_2/IntroductionToJava/ChuyenDoiTien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/out/production/MODULE_2/IntroductionToJava/DisplayByYourName.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/MODULE_2/out/production/MODULE_2/IntroductionToJava/DocSo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MODULE_2/Project/PJ1/src/ss2/Demo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project/PJ1/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="78ed1bfb-0067-4c10-8691-23225868f809" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -229,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="33mfaSYfr51VKPLvIc59My3p3Wq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -240,23 +31,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/hieuvannguyen/Downloads/CODE_GYM/Module2/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/hieuvannguyen/Downloads/CODE_GYM/Module2/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -273,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759927230662</updated>
       <workItem from="1759927232004" duration="1048000" />
+      <workItem from="1759929033373" duration="21000" />
     </task>
     <servers />
   </component>
