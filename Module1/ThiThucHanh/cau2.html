@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function PhanSo(tuSoA, mauSoA, tuSoB, mauSoB) {
+            return (tuSoA / mauSoA) == (tuSoB / mauSoB)
+        }
+        let mauA = 3;
+        let tuA = 2;
+        let mauB = 6;
+        let tuB = 4;
+
+        if (PhanSo(tuA, mauA, tuB, mauB)) {
+            document.writeln("hai phan so bang nhau")
+        } else {
+            document.writeln("hai phan so khong bang nhau")
+        }
+    </script>
+</body>
+
+</html>

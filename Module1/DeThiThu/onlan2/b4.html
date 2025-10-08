@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let DSmaytinh = [];
+        class MAYTINH {
+            mamay;
+            tenmay;
+            hangsanxuat;
+            giaban;
+
+            constructor(mamay, tenmay, hangsanxuat, giaban) {
+                this.mamay = mamay;
+                this.tenmay = tenmay;
+                this.hangsanxuat = hangsanxuat;
+                this.giaban = giaban;
+            }
+
+            setMaMay(mamay) {
+                this.mamay = mamay;
+            }
+            getMaMay() {
+                return this.mamay;
+            }
+
+            setTenMay(tenmay) {
+                this.tenmay = tenmay;
+            }
+            getTenMay() {
+                return this.tenmay;
+            }
+
+            setHangSanXuat(hangsanxuat) {
+                this.hangsanxuat = hangsanxuat;
+            }
+            getHangSanXuat() {
+                return this.hangsanxuat;
+            }
+
+            setGiaBan(giaban) {
+                this.giaban = giaban;
+            }
+            getGiaBan() {
+                return this.giaban;
+            }
+
+            toString() {
+                return `Máy tính[${this.mamay} - ${this.tenmay} - ${this.hangsanxuat} - ${this.giaban}]`;
+            }
+
+
+        }
+        function themMayTinh(mt){
+            DSmaytinh.push(mt);
+        }
+        function hienthiMayTinh(){
+            for (let i = 0; i < DSmaytinh.length; i++) {
+                document.writeln(DSmaytinh[i].toString() + "<br >");
+            }
+        }
+
+        function sapXepTheoGia(){
+            DSmaytinh.sort((a, b) => b.getGiaBan() - a.getGiaBan());
+        }
+        let may1 = new MAYTINH(11, 'iphone', 'apple', 15000);
+        let may2 = new MAYTINH(5, 'oppo', 'op', 10000);
+        let may3 = new MAYTINH(17, 'nokia', 'no', 5000);
+        let may4 = new MAYTINH(14, 'samsung', 'sam', 20000);
+
+        themMayTinh(may1);
+        themMayTinh(may2);
+        themMayTinh(may3);
+        themMayTinh(may4);
+        sapXepTheoGia();
+        console.log(DSmaytinh);
+        hienthiMayTinh();
+    </script>
+</body>
+
+</html>

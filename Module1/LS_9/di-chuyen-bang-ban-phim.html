@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+        position: absolute; /* cần để top/left có hiệu lực */
+        top: 0px;           /* vị trí ban đầu từ trên xuống */
+        left: 0px;          /* vị trí ban đầu từ trái sang */
+      }
+    </style>
+  </head>
+  <body onload="docReady()"> <!-- Khi trang load xong thì gọi hàm chay() -->
+    <img
+      id="imge"
+      src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png"
+    />
+  </body>
+  <script>
+    let nobita; // biến để lưu đối tượng hình Nobita
+
+    // Hàm di chuyển lên (giảm top)
+    function len() {
+      nobita = document.getElementById("imge");
+      nobita.style.top = parseInt(nobita.style.top) - 10 + "px";
+    }
+
+    // Hàm di chuyển xuống (tăng top)
+    function xuong() {
+      nobita = document.getElementById("imge");
+      nobita.style.top = parseInt(nobita.style.top) + 10 + "px";
+    }
+
+    // Hàm di chuyển sang trái (giảm left)
+    function trai() {
+      nobita = document.getElementById("imge");
+      nobita.style.left = parseInt(nobita.style.left) - 10 + "px";
+    }
+
+    // Hàm di chuyển sang phải (tăng left)
+    function phai() {
+      nobita = document.getElementById("imge");
+      nobita.style.left = parseInt(nobita.style.left) + 10 + "px";
+    }
+
+    // Hàm xử lý sự kiện phím bấm
+    function xuLy(evt) {
+      switch (evt.keyCode) {
+        case 37: // mũi tên trái
+          trai();
+          break;
+        case 38: // mũi tên lên
+          len();
+          break;
+        case 39: // mũi tên phải
+          phai();
+          break;
+        case 40: // mũi tên xuống
+          xuong();
+          break;
+      }
+    }
+
+    // Kích hoạt lắng nghe sự kiện bàn phím
+    function docReady() {
+      window.addEventListener("keydown", xuLy);
+    }
+  </script>
+</html>

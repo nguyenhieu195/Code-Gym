@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <script
+      src="https://kit.fontawesome.com/9aec9406c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .container {
+        width: 100%;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .images img {
+        width: 300px;
+      }
+      .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .timkiem {
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Bóng */
+      }
+      .timkiem input {
+        margin-left: 5px;
+        width: 400px;
+        border: 0;
+        font-size: 13px;
+        line-height: 25px;
+        outline: none; /* Tắt viền xanh */
+      }
+      .timkiem img {
+        width: 50px;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="https://www.google.com/search">
+        <div class="images">
+          <img
+            src="https://github.com/nguyenhieu195/Code-Gym/blob/main/Lession%205/img/Screenshot%202025-08-13%20at%2014.07.35-Photoroom.png?raw=true"
+          />
+        </div>
+        <br />
+        <div class="timkiem">
+          <span class="material-symbols-outlined" style="color: #5f6367;"> search </span>
+          <input type="text" name="q" placeholder="Search Google or type a URL" />
+          <img
+            src="https://github.com/nguyenhieu195/Code-Gym/blob/main/Lession%205/img/Screenshot%202025-08-13%20at%2013.14.42.png?raw=true"
+            alt=""
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

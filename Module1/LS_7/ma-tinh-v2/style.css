@@ -1,0 +1,33 @@
+.container {
+    margin: 0 auto;
+    width: 800px;
+    height: 320px;
+    border: 1px solid;
+}
+
+.inp {
+    padding: 0 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp input {
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+
+.grid {
+    padding: 0 20px; /***********         căn chỉnh bố cục 2 bên bằng 20px        *************/
+    display: grid;  /* chinh bo cuc cac button thanh lưới */
+    grid-template-columns: repeat(7, 1fr);  /* so luong button mỗi hang*/
+    gap: 10px; /* Khooang cach cua cac button tren va dưới*/
+    height: 200px; /*chiu cao cua moi button */
+}
+.grid button{
+    border-radius: 0;
+    border: 1px solid;
+    font-size: 20px;
+}

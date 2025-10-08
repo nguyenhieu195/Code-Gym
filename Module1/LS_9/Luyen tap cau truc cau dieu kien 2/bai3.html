@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tính diện tích hình vuông</h1>
+    <input type="text" min="0" name="" id="a" placeholder="Nhập cạnh a (mét)" />
+    <button onclick="dientich()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function dientich() {
+      let a = document.getElementById("a").value;
+      if (isNaN(a)) {
+        alert("Cạnh phải là số !");
+      }
+      else if (a > 0) {
+        let dientich = a * a;
+        document.getElementById("display").innerHTML =
+          "Diện tích hình vuông có cạnh bằng " +
+          a +
+          " là: " +
+          dientich +
+          " mét vuông";
+      } else {
+        alert("Cạnh phải lớn hơn 0!");
+      }
+    }
+  </script>
+</html>
+<!-- Tính diện tích hình vuông khi biết cạnh a -->

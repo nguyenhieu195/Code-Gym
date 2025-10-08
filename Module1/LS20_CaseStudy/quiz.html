@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Sinh viên</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: center; }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Quản lý Sinh viên</h2>
+
+  <input type="text" id="search" placeholder="Tìm sinh viên..." onkeyup="searchStudent()">
+  <button onclick="showForm()">+ Thêm sinh viên</button>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>MSSV</th>
+        <th>Họ tên</th>
+        <th>Lớp</th>
+        <th>Email</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Form thêm/sửa -->
+  <div id="form" style="display:none; margin-top:20px;">
+    <h3 id="formTitle">Thêm Sinh viên</h3>
+    <input type="hidden" id="editIndex">
+    <input type="text" id="maSV" placeholder="MSSV"><br><br>
+    <input type="text" id="hoTen" placeholder="Họ tên"><br><br>
+    <input type="text" id="lop" placeholder="Lớp"><br><br>
+    <input type="email" id="email" placeholder="Email"><br><br>
+    <button onclick="saveStudent()">Lưu</button>
+    <button onclick="hideForm()">Hủy</button>
+  </div>
+
+  <script>
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    function renderTable() {
+      const tbody = document.querySelector("#studentTable tbody");
+      tbody.innerHTML = "";
+      students.forEach((s, i) => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${s.maSV}</td>
+            <td>${s.hoTen}</td>
+            <td>${s.lop}</td>
+            <td>${s.email}</td>
+            <td>
+              <button onclick="editStudent(${i})">Sửa</button>
+              <button onclick="deleteStudent(${i})">Xóa</button>
+            </td>
+          </tr>`;
+      });
+      localStorage.setItem("students", JSON.stringify(students));
+    }
+
+    function showForm(edit = false) {
+      document.getElementById("form").style.display = "block";
+      document.getElementById("formTitle").innerText = edit ? "Sửa Sinh viên" : "Thêm Sinh viên";
+    }
+
+    function hideForm() {
+      document.getElementById("form").style.display = "none";
+    }
+
+    function saveStudent() {
+      const maSV = document.getElementById("maSV").value;
+      const hoTen = document.getElementById("hoTen").value;
+      const lop = document.getElementById("lop").value;
+      const email = document.getElementById("email").value;
+      const editIndex = document.getElementById("editIndex").value;
+
+      if (editIndex === "") {
+        students.push({ maSV, hoTen, lop, email });
+      } else {
+        students[editIndex] = { maSV, hoTen, lop, email };
+        document.getElementById("editIndex").value = "";
+      }
+      hideForm();
+      renderTable();
+    }
+
+    function editStudent(i) {
+      const s = students[i];
+      document.getElementById("maSV").value = s.maSV;
+      document.getElementById("hoTen").value = s.hoTen;
+      document.getElementById("lop").value = s.lop;
+      document.getElementById("email").value = s.email;
+      document.getElementById("editIndex").value = i;
+      showForm(true);
+    }
+
+    function deleteStudent(i) {
+      students.splice(i, 1);
+      renderTable();
+    }
+
+    function searchStudent() {
+      const keyword = document.getElementById("search").value.toLowerCase();
+      const rows = document.querySelectorAll("#studentTable tbody tr");
+      rows.forEach(row => {
+        row.style.display = row.innerText.toLowerCase().includes(keyword) ? "" : "none";
+      });
+    }
+
+    renderTable();
+  </script>
+</body>
+</html>

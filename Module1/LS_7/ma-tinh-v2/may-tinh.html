@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy tính của Híu đép</title>
+    <link rel="stylesheet" href="may-tinh.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="inp">
+        <input type="text" name="" id="result" placeholder="0" />
+      </div>
+      <div class="btn">
+        <button onclick="rad()">RAD</button>
+        <button onclick="deg()">DEG</button>
+        <button onclick="giaiThua()">x!</button>
+        <button onclick="number('(')">(</button>
+        <button onclick="number(')')">)</button>
+        <button onclick="phanTram()">%</button>
+        <button onclick="xoa()">AC</button>
+
+        <button onclick="nghichDao()">lnv</button>
+        <button onclick="sin()">sin</button>
+        <button onclick="ln()">ln</button>
+        <button class="phimSo" onclick="number('7')">7</button>
+        <button class="phimSo" onclick="number('8')">8</button>
+        <button class="phimSo" onclick="number('9')">9</button>
+        <button onclick="phepChia()"><b>÷</b></button>
+
+        <button onclick="pi()">π</button>
+        <button onclick="cos()">cos</button>
+        <button onclick="log()">log</button>
+        <button class="phimSo" onclick="number('4')">4</button>
+        <button class="phimSo" onclick="number('5')">5</button>
+        <button class="phimSo" onclick="number('6')">6</button>
+        <button onclick="phepNhan()"><b>×</b></button>
+
+        <button onclick="euler()">e</button>
+        <button onclick="tan()">tan</button>
+        <button onclick="can()"><b>√</b></button>
+        <button class="phimSo" onclick="number('1')">1</button>
+        <button class="phimSo" onclick="number('2')">2</button>
+        <button class="phimSo" onclick="number('3')">3</button>
+        <button onclick="phepTru()"><b>−</b></button>
+
+        <button onclick="dapAnCu()">Ans</button>
+        <button onclick="exp()">EXP</button>
+        <button onclick="soMu()">xʸ</button>
+        <button class="phimSo" onclick="number('0')">0</button>
+        <button class="phimSo" onclick="number('.')">.</button>
+        <button class="phimBang" onclick="phimBang()"><b>=</b></button>
+        <button onclick="phepCong()"><b>+</b></button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function number(nums) {
+      document.getElementById("result").value += nums;
+    }
+    function phimBang() {
+      let Result = eval(document.getElementById("result").value);
+      document.getElementById("result").value = Result;
+    }
+    function xoa() {
+      document.getElementById("result").value = "";
+    }
+    function phepCong() {
+      document.getElementById("result").value += " + ";
+    }
+    function phepTru() {
+      document.getElementById("result").value += " - ";
+    }
+    function phepNhan() {
+      document.getElementById("result").value += " * ";
+    }
+    function phepChia() {
+      document.getElementById("result").value += " / ";
+    }
+    function phanTram() {
+      let phantram = eval(document.getElementById("result").value);
+      document.getElementById("result").value = phantram / 100;
+    }
+    function giaiThua() {
+      let q = eval(document.getElementById("result").value);
+      let giaithua = 1;
+      for (let i = 1; i <= q; i++) {
+        giaithua = giaithua * i;
+      }
+      document.getElementById("result").value = giaithua;
+    }
+  </script>
+</html>

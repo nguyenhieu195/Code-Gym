@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="myImg"
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg"
+      alt=""
+    /><br />
+    <p>Click button below to move the image to right</p>
+    <button type="button" onclick="dichuyen()">Click me!</button>
+  </body>
+  <script>
+    // Khai báo biến toàn cục để lưu đối tượng hình ảnh
+    let images = document.getElementById("myImg");
+    let gocQuayBong = 0; // góc quay của bóng
+
+    // Hàm khởi tạo khi trang vừa load xong
+    function init() {
+      // Đặt vị trí của ảnh là relative để có thể thay đổi left/top
+      images.style.position = "relative";
+
+      // Đặt vị trí ban đầu của ảnh (cách mép trái = 0px)
+      images.style.left = "0px";
+    }
+
+    // Hàm dịch chuyển ảnh sang phải
+    function dichuyen() {
+      // Lấy giá trị hiện tại của left (ví dụ: "100px")
+      // parseInt() chuyển "100px" → 100
+      // Cộng thêm 100 → di chuyển thêm 100px
+      // Sau đó ghép "px" để CSS hiểu
+      images.style.left = parseInt(images.style.left) + 10 + "px";
+
+      gocQuayBong += 40;
+      images.style.transform = "rotate(" + gocQuayBong + "deg)";
+    }
+
+    // Khi trang web load xong thì tự động gọi init()
+    window.onload = init;
+  </script>
+</html>

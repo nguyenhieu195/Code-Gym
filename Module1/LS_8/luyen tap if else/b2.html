@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="tendangnhap">
+    <input type="password" name="" id="matkhau">
+    <button type="button" onclick="dangnhap()">Đăng nhập</button>
+</body>
+    <script>
+        function dangnhap(){
+            let tendangnhap = document.getElementById('tendangnhap').value;
+            let matkhau = document.getElementById('matkhau').value;
+
+            if(tendangnhap == 'Admin'){ //username = Admin
+                if(matkhau == 'TheMaster'){ // pass = TheMaster
+                    alert('Welcome');
+                }
+                else if(matkhau == ''){
+                    alert('Canceled');
+                }
+                else{
+                    alert('Wrong password');
+                }
+            }
+            else if(tendangnhap == ''){
+                alert('Canceled');
+            }
+            else{
+                alert('I dont know you');
+            }
+        }
+    </script>
+</html>

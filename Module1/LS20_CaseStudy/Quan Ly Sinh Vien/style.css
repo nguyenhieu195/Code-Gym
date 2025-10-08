@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tieude {
+  width: 100vw;
+  background: #4e87e3;
+  color: #fff;
+  padding: 15px 0px 16px 40px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.qlSinhVien {
+  background: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90vw;
+  max-width: 600px;
+  min-height: 520px;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(59, 130, 246, 0.1),
+    0 1.5px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px 20px 24px;
+}
+
+.qlSinhVien h1 {
+  color: #4e87e3;
+  margin-top: -10px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+.qlSinhVien table {
+  margin-top: -5%;
+  margin-left: -3%;
+}
+
+.themsinhvien {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.themsinhvien table {
+  text-align: left;
+  width: 100%;
+}
+.themsinhvien td {
+  padding: 8px 6px;
+  font-size: 1rem;
+}
+.btn {
+  width: 100%;
+  margin-top: 13px;
+}
+.btn input {
+  background-color: #4e87e3;
+  border: none;
+  height: 30px;
+  width: 15%;
+  font-size: 10px;
+}
+
+.themsinhvien select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #c0d0e3;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: left;
+  text-align-last: left;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  transition: border 0.2s;
+}
+.inp {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #c0d0e3;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  transition: border 0.2s;
+}
+/* .inp:focus {
+  border: 1.5px solid #3b8ff6;
+  outline: none;
+}
+
+input[type="radio"] {
+  accent-color: #3b82f6;
+  margin-right: 3px;
+} */
+
+.danhSachSV h1 {
+  color: #4e87e3;
+}
+.danhSachSV table {
+  border-collapse: collapse;
+  width: 100%;      
+  text-align: center;
+}
+.danhSachSV th {
+  background-color: #4e87e3;
+  color: white;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid white;
+}
+.danhSachSV td {
+  height: 30px;
+  font-size: 15px;
+}
+.danhSachSV button {
+  border: none;
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  color: white;
+}
+.danhSachSV {
+  width: 90%;
+}

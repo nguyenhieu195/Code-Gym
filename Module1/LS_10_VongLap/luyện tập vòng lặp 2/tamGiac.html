@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="d1"></p>
+    <p id="d1"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+</body>
+<script>
+    let n = 5;
+
+    // Tam giác 1: tăng dần
+    for (let i = 1; i <= n; i++) {
+        document.writeln("*".repeat(i) + "<br>");
+    }
+    document.writeln("<br>");
+
+    // Tam giác 2: giảm dần
+    for (let i = n; i >= 1; i--) {
+        document.writeln("*".repeat(i) + "<br>");
+    }
+    document.writeln("<br>");
+
+    // Tam giác 3: tăng dần lệch phải
+    for (let i = 1; i <= n; i++) {
+        document.writeln("&nbsp;".repeat(n - i) + "*".repeat(i) + "<br>");
+    }
+    document.writeln("<br>");
+
+    // Tam giác 4: giảm dần lệch phải
+    for (let i = n; i >= 1; i--) {
+        document.writeln("&nbsp;".repeat(n - i) + "*".repeat(i) + "<br>");
+    }
+</script>
+
+</html>

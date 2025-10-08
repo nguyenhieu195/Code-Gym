@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Tính cước điện thoại cho một hộ gia đình</h3>
+    <p>Cước thuê bao cố định hàng tháng: 20.000 VNĐ.</p>
+    <p>Giá cước các cuộc gọi:</p>
+    <p>
+      -Nội hạt: 600 VNĐ/phút <br />
+      <input
+        min="0"
+        style="width: 170px"
+        type="number"
+        name=""
+        id="noihat"
+        placeholder="Nhập số phút muốn gọi"
+      />
+      <input type="submit" onclick="noihat()" name="" id="" />
+      <label for="" id="displayNoiHat"></label>
+    </p>
+    <p>
+      -Nội tỉnh: 900 VNĐ/phút <br />
+      <input
+        style="width: 170px"
+        type="number"
+        min="0"
+        name=""
+        id="noitinh"
+        placeholder="Nhập số phút muốn gọi"
+      />
+      <input type="submit" onclick="noitinh()" name="" id="" />
+      <label for="" id="displayNoiTinh"></label>
+    </p>
+    <p>
+      -Liên tỉnh: 1.500 VNĐ/phút <br />
+      <input
+        min="0"
+        style="width: 170px"
+        type="number"
+        name=""
+        id="lientinh"
+        placeholder="Nhập số phút muốn gọi"
+      />
+      <input type="submit" onclick="lientinh()" name="" id="" />
+      <label for="" id="displayLienTinh"></label>
+    </p>
+    <p>
+      -Quốc tế: 4.000 VNĐ/phút <br />
+      <input
+        min="0"
+        style="width: 170px"
+        type="number"
+        name=""
+        id="quocte"
+        placeholder="Nhập số phút muốn gọi"
+      />
+      <input type="submit" onclick="quocte()" name="" id="" />
+      <label for="" id="displayQuocTe"></label>
+    </p>
+    <p id="result">Tổng cước điện thoại mà gia đình phải trả trong cả tháng:</p>
+    <input type="submit" name="" id="" onclick="result()" value="Submit" />
+  </body>
+  <script>
+    // Chặn gõ dấu "-"
+    const inputNoiHat = document.getElementById("noihat");
+    inputNoiHat.addEventListener("keypress", function (e) {
+      if (e.key === "-") {
+        e.preventDefault();
+      }
+    });
+    const inputNoiTinh = document.getElementById("noitinh");
+    inputNoiTinh.addEventListener("keypress", function (e) {
+      if (e.key === "-") {
+        e.preventDefault();
+      }
+    });
+    const inputLienTinh = document.getElementById("lientinh");
+    inputLienTinh.addEventListener("keypress", function (e) {
+      if (e.key === "-") {
+        e.preventDefault();
+      }
+    });
+    const inputQuocTe = document.getElementById("quocte");
+    inputQuocTe.addEventListener("keypress", function (e) {
+      if (e.key === "-") {
+        e.preventDefault();
+      }
+    });
+
+    let tienNoiHat = 0;
+    let tienNoiTinh = 0;
+    let tienLienTinh = 0;
+    let tienQuocTe = 0;
+
+    const CUOC_HANG_THANG = 20000;
+    function noihat() {
+      const CUOC_NOI_HAT = 600;
+      let soPhut = document.getElementById("noihat").value;
+      tienNoiHat = soPhut * CUOC_NOI_HAT;
+      document.getElementById("displayNoiHat").innerHTML = tienNoiHat + " VND";
+    }
+    function noitinh() {
+      const CUOC_NOI_TINH = 900;
+      let soPhut = document.getElementById("noitinh").value;
+      tienNoiTinh = soPhut * CUOC_NOI_TINH;
+      document.getElementById("displayNoiTinh").innerHTML =
+        tienNoiTinh + " VND";
+    }
+    function lientinh() {
+      const CUOC_LIEN_TINH = 1500;
+      let soPhut = document.getElementById("lientinh").value;
+      tienLienTinh = soPhut * CUOC_LIEN_TINH;
+      document.getElementById("displayLienTinh").innerHTML =
+        tienLienTinh + " VND";
+    }
+    function quocte() {
+      const CUOC_QUOC_TE = 4000;
+      let soPhut = document.getElementById("quocte").value;
+      tienQuocTe = soPhut * CUOC_QUOC_TE;
+      document.getElementById("displayQuocTe").innerHTML = tienQuocTe + " VND";
+    }
+    function result() {
+      let tongtien =
+        tienNoiHat + tienNoiTinh + tienLienTinh + tienQuocTe + CUOC_HANG_THANG;
+      document.getElementById("result").innerHTML = tongtien + " VND";
+    }
+  </script>
+</html>
+<!-- Tính cước điện thoại cho một hộ gia đình dựa trên các thông số được cung cấp. -->

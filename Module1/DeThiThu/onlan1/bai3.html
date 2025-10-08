@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function isFibo(nums){
+            let soTruoc = 1;
+            let soTruocTruoc = 0;
+            let fibo = 0;
+
+            if(nums == 1 || nums == 0) return true;
+
+            while(fibo < nums){
+                fibo = soTruoc + soTruocTruoc;
+
+                soTruocTruoc = soTruoc;
+                soTruoc = fibo;
+            }
+            
+            return fibo === nums;
+        }
+
+        function timFibo(mang){
+            let newMang = [];
+            for(let i = 0; i < mang.length; i++){
+                if(isFibo(mang[i])){
+                    newMang.push(mang[i]);
+                }
+            }
+            newMang.sort((a,b)=> {
+                return a - b;
+            });
+            return newMang;
+        }
+
+        let mang1 = [1,5,6,34,13,9,12,8,0,5,1,13,21,4181,610];
+        let newMang = timFibo(mang1);
+
+        console.log(mang1);
+        console.log(newMang);
+        
+    </script>
+</body>
+</html>

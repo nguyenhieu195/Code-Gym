@@ -1,0 +1,118 @@
+<!--
+Giá điện sẽ được tính theo từng bậc như sau:
+Bậc 1 (0 - 50 kWh): Tiền điện: số kWh * 1.806 đồng/kWh
+Bậc 2 (51 - 100kWh): Tiền điện: số kWh * 1.866 đồng/kWh
+Bậc 3 (101 - 200 kWh): Tiền điện: số kWh * 2.167 đồng/kWh
+Bậc 4 (201 - 300 kWh): Tiền điện: số kWh * 2.729 đồng/kWh
+Bậc 5 (301 - 400 kWh): Tiền điện: số kWh * 3.050 đồng/kWh
+Bậc 6 (401 kWh trở lên): Tiền điện: số kWh * 3.151 đồng/kWh
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Tính tiền điện</h2>
+  <hr />
+  <p>Bảng giá điện:</p>
+  <p>
+    - Bậc 1 (0 - 50 kWh): 1.806 đồng/kWh <br />
+    - Bậc 2 (51 - 100kWh): 1.866 đồng/kWh <br />
+    - Bậc 3 (101 - 200 kWh): 2.167 đồng/kWh <br />
+    - Bậc 4 (201 - 300 kWh): 2.729 đồng/kWh <br />
+    - Bậc 5 (301 - 400 kWh): 3.050 đồng/kWh <br />
+    - Bậc 6 (401 kWh trở lên): 3.151 đồng/kWh
+  </p>
+  <hr />
+  Nhập số kWh dùng trong tháng: <input type="text" name="" id="inp" />
+  <button onclick="tinhtien()">Tính</button>
+  <p id="dbac1"></p>
+  <p id="dbac2"></p>
+  <p id="dbac3"></p>
+  <p id="dbac4"></p>
+  <p id="dbac5"></p>
+  <p id="dbac6"></p>
+  <p id="display"></p>
+</body>
+<script>
+  function tinhtien() {
+    let soDien = document.getElementById("inp").value;
+
+    if (isNaN(soDien)) {
+      alert("Số điện phải là số !");
+    } else if (soDien >= 0) {
+      let bac1 = 0;
+      let bac2 = 0;
+      let bac3 = 0;
+      let bac4 = 0;
+      let bac5 = 0;
+      let bac6 = 0;
+
+      if (soDien <= 50) {
+        bac1 = soDien * 1.806;
+        document.getElementById("dbac1").innerHTML = "Bậc 1: " + bac1.toFixed(3) + " đồng";
+        soDien = 0;
+      } else {
+        bac1 = 50 * 1.806;
+        soDien = soDien - 50;
+        document.getElementById("dbac1").innerHTML = "Bậc 1: " + bac1.toFixed(3) + " đồng";
+      }
+
+      if (soDien <= 100) {
+        bac2 = soDien * 1.866;
+        document.getElementById("dbac2").innerHTML = "Bậc 2: " + bac2.toFixed(3) + " đồng";
+        soDien = 0;
+      } else {
+        bac2 = 50 * 1.866;
+        soDien = soDien - 50;
+        document.getElementById("dbac2").innerHTML = "Bậc 2: " + bac2.toFixed(3) + " đồng";
+      }
+
+      if (soDien <= 100) {
+        bac3 = soDien * 2.167;
+        document.getElementById("dbac3").innerHTML = "Bậc 3: " + bac3.toFixed(3) + " đồng";
+        soDien = 0;
+      } else {
+        bac3 = 100 * 2.167;
+        soDien = soDien - 100;
+        document.getElementById("dbac3").innerHTML = "Bậc 3: " + bac3.toFixed(3) + " đồng";
+      }
+
+      if (soDien <= 100) {
+        bac4 = soDien * 2.729;
+        document.getElementById("dbac4").innerHTML = "Bậc 4: " + bac4.toFixed(3) + " đồng";
+        soDien = 0;
+      } else {
+        bac4 = 100 * 2.729;
+        soDien = soDien - 100;
+        document.getElementById("dbac4").innerHTML = "Bậc 4: " + bac4.toFixed(3) + " đồng";
+      }
+
+      if (soDien <= 100) {
+        bac5 = soDien;
+        lementById("dbac5").innerHTML = "Bậc 5: " + bac5.toFixed(3) + " đồng";
+        soDien = 0;
+      } else {
+        bac5 = 100 * 3.05;
+        soDien = soDien - 100;
+        document.getElementById("dbac5").innerHTML = "Bậc 5: " + bac5.toFixed(3) + " đồng";
+      }
+
+      bac6 = soDien * 3.151;
+      document.getElementById("dbac6").innerHTML = "Bậc 6: " + bac6.toFixed(3) + " đồng";
+
+      soDien = 0;
+      let thanhtien = bac1 + bac2 + bac3 + bac4 + bac5 + bac6;
+      document.getElementById("display").innerHTML = "Tổng: " + thanhtien.toFixed(3) + " đồng";
+    } else {
+      alert("Số điện không thể bé hơn 0 !");
+    }
+  }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Kiểm tra tuổi</h1>
+    <input type="text" min="0" name="" id="a" placeholder="Nhập tuổi của bạn" />
+    <button onclick="kiemtra()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function kiemtra() {
+      let a = document.getElementById("a").value;
+      if (isNaN(a)) {
+        alert("Tuổi phải là số !");
+      } else if (!Number.isInteger(Number(a))) {
+        alert("Tuổi phải là số nguyên !");
+      } else if (a > 0 && a < 120) {
+        document.getElementById("display").innerHTML = "Là tuổi của 1 người";
+      } else {
+        alert("Tuổi phải lớn hơn 0 và bé hơn 120 !");
+      }
+    }
+  </script>
+</html>
+<!-- Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0. -->

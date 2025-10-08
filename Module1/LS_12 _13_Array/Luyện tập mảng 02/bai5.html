@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = +prompt('nhap so phan tu co trong mang 1');
+
+        let a = []
+        for (let i = 0; i < n; i++) {
+            a[i] = +prompt('nhap phan tu thu ' + (i + 1) + ": ")
+        }
+        let m = +prompt('nhap so phan tu co trong mang 2');
+
+        let b = []
+        for (let i = 0; i < n; i++) {
+            b[i] = +prompt('nhap phan tu thu ' + (i + 1) + ": ")
+        }
+
+        let check = false
+        if (a.length !== b.length) {
+            document.writeln('hai chuoi khong bang nhau')
+        }
+        else {
+            for (let i = 0; i < a.length; i++) {
+                if(a[i] !== b[i]){
+                    check = true;
+                    break;
+                }
+            }
+            if(!check){
+                document.writeln("hai chuoi bang nhau")
+            }else{
+                document.writeln('hai chuoi khong bang nhau')
+            }
+        }
+    </script>
+</body>
+
+</html>
