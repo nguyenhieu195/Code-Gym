@@ -1,6 +1,6 @@
 package pj2;
 
-public class hienThi20SNTdauTien {
+public class SNTbeHon100 {
     public static boolean snt(int x) {
         if (x < 2) return false;
 
@@ -13,11 +13,9 @@ public class hienThi20SNTdauTien {
     }
 
     public static void main(String[] args) {
-        int dem = 0;
-        for (int i = 0; dem < 20; i++) {
+        for (int i = 0; i < 100; i++) {
             if (snt(i)) {
-                System.out.print(i + " ");
-                dem++;
+                System.out.println(i + " ");
             }
         }
     }
