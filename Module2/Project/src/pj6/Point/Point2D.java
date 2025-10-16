@@ -8,7 +8,9 @@ public class Point2D {
         this.x = x;
         this.y = y;
     }
-    public Point2D() {}
+
+    public Point2D() {
+    }
 
     public float getX() {
         return x;
@@ -32,8 +34,9 @@ public class Point2D {
     }
 
     public float[] getXY() {
-
+        return new float[]{this.x, this.y};
     }
+
     @Override
     public String toString() {
         return "Point2D{" +
