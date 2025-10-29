@@ -17,7 +17,7 @@ public class MyList<E> {
 
     // Them phan tu vao vi tri index
     public void add(int index, E element){
-        if(index > 0 && index < size){
+        if(index < 0 && index > size){
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
         ensureCapacity(size + 1); // cộng thêm 1 chỗ vào list
@@ -27,9 +27,15 @@ public class MyList<E> {
         elements[index] = element;
     }
 
+    // đảm bảo dung lượng ô chứa còn trống, nếu không sẽ nhân đôi dung lượng
     public void ensureCapacity(int minCapacity){
         if(minCapacity > elements.length){
-            int newC
+            int newCapacity = Math.max(elements.length * 2, minCapacity); // nếu không đủ chỗ thì gấp đôi mảng
+            Object newElements[] = new Object[newCapacity];
+            for (int i = 0; i < size; i++) {
+                newElements[i] = elements[i]; // gán các phần tử trong mảng cũ vào mảng mới
+            }
+            elements = newElements; //gán mảng cũ bằng mảng mới
         }
     }
 }
