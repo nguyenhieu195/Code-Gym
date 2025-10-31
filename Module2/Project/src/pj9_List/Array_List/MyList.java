@@ -8,11 +8,11 @@ public class MyList<E> {
 
     // Constructor không tham số — tạo mảng mặc định 10 phần tử
     public MyList() {
-        element = new Object[DEFAULT_CAPACITY];
+        elements = new Object[DEFAULT_CAPACITY];
     }
 
     public MyList(int compacity) {
-        element = new Object[compacity];
+        elements = new Object[compacity];
     }
 
     // Them phan tu vao vi tri index
@@ -38,4 +38,8 @@ public class MyList<E> {
             elements = newElements; //gán mảng cũ bằng mảng mới
         }
     }
+
+    // xoá pt tại index
+
+
 }
