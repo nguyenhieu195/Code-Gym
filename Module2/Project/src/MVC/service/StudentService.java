@@ -8,6 +8,10 @@ import java.util.ArrayList;
 public class StudentService implements IStudentService {
     StudentRespository studentRespository;
 
+    public StudentService(StudentRespository studentRespository) {
+        this.studentRespository = studentRespository;
+    }
+
     @Override
     public void addStudent(Student student) {
         if (student.getId() == null) {
