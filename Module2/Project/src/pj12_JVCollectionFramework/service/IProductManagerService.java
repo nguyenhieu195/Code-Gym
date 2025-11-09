@@ -1,5 +1,17 @@
 package pj12_JVCollectionFramework.service;
 
-public interface IProductManagerService {
+import pj12_JVCollectionFramework.entity.Product;
 
+public interface IProductManagerService {
+    public boolean addProduct(Product product);
+
+    public boolean removeProduct(int id);
+
+    public boolean updateProduct(Product product);
+
+    public Product findProductById(int id);
+
+    public Product findProductByName(String name);
+
+    public boolean sortProductByPrice();
 }

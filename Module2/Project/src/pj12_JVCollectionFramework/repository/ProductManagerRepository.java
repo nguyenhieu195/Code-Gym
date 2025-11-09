@@ -14,24 +14,22 @@ public class ProductManagerRepository {
         products.add(product);
     }
 
-    public void updateProduct(Product product) {
+    public boolean updateProduct(Product product) {
         for (Product p : products){
             if(Objects.equals(p.getId(), product.getId())){
                 p.setName(product.getName());
                 p.setPrice(product.getPrice());
+                return true;
             }
         }
+        return false;
     }
 
     public void removeProduct(int id){
-        for (Product p : products) {
-            if(Objects.equals(p.getId(),id)){
-                products.remove(p);
-            }
-        }
+        products.removeIf(product -> Objects.equals(product.getId(), id));
     }
 
-    public boolean findById(int id){
+    public boolean checkIdProduct(int id){
         for (Product productManager : products){
             if (productManager.getId() == id){
                 return true;
@@ -51,7 +49,7 @@ public class ProductManagerRepository {
 
     public Product findProductByName(String name){
         for (Product productManager : products){
-            if(productManager.getName() == name){
+            if(Objects.equals(productManager.getName() , name)){
                 return productManager;
             }
         }
@@ -60,5 +58,12 @@ public class ProductManagerRepository {
 
     public void sortProductByPrice(){
         Collections.sort(products, new SortProductByPrice());
+    }
+
+    public void sortProductByID(){
+        Collections.sort(products, new SortProductByID());
+    }
+    public  List<Product> displayProducts() {
+        return products;
     }
 }

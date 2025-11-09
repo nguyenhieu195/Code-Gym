@@ -1,5 +1,66 @@
 package pj12_JVCollectionFramework.service;
 
-public class ProductManagerService {
+import pj12_JVCollectionFramework.entity.Product;
+import pj12_JVCollectionFramework.repository.ProductManagerRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class ProductManagerService implements IProductManagerService {
+    ProductManagerRepository repository;
+
+    public ProductManagerService(ProductManagerRepository repository) {
+        this.repository = repository;
+    }
+
+    public boolean addProduct(Product product) {
+        if (repository.checkIdProduct(product.getId())) {
+            return false;
+        }
+        repository.addProduct(product);
+        return true;
+    }
+
+    public boolean removeProduct(int id) {
+        if (repository.checkIdProduct(id)) {
+            repository.removeProduct(id);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateProduct(Product product) {
+        return repository.updateProduct(product);
+    }
+
+    public Product findProductById(int id) {
+        return repository.findProductById(id);
+    }
+
+    public Product findProductByName(String name) {
+        return repository.findProductByName(name);
+    }
+
+    public boolean sortProductByPrice() {
+            List<Product> oldP = new ArrayList<>(repository.displayProducts());
+            repository.sortProductByPrice();
+            List<Product> newP = repository.displayProducts();
+            return !Objects.equals(oldP, newP);
+    }
+
+    public boolean sortProductByID() {
+        List<Product> oldP = new ArrayList<>(repository.displayProducts());
+        repository.sortProductByID();
+        List<Product> newP = repository.displayProducts();
+        return !Objects.equals(oldP, newP);
+    }
+
+    public List<Product> displayProducts() {
+        return repository.displayProducts();
+    }
+
+    public boolean checkByID(int id){
+        return repository.checkIdProduct(id);
+    }
 }

@@ -13,11 +13,11 @@ public class Product {
 
     @Override
     public String toString() {
-        return "ProductManager{" +
+        return "Product[" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                '}';
+                ']';
     }
 
     public Integer getId() {
