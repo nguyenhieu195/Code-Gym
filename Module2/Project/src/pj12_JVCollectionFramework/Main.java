@@ -8,10 +8,7 @@ import pj12_JVCollectionFramework.view.ProductView;
 
 public class Main {
     public static void main(String[] args) {
-        ProductManagerRepository repository = new ProductManagerRepository();
-        ProductManagerService service = new ProductManagerService(repository);
-        ProductManagerController controller = new ProductManagerController(service);
-        ProductView view = new ProductView(controller);
+        ProductView view = new ProductView();
 
         view.menu();
     }

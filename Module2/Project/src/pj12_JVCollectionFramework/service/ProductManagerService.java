@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class ProductManagerService implements IProductManagerService {
-    ProductManagerRepository repository;
+    private final ProductManagerRepository repository;
 
-    public ProductManagerService(ProductManagerRepository repository) {
-        this.repository = repository;
+    public ProductManagerService() {
+        repository = new ProductManagerRepository();
     }
 
     public boolean addProduct(Product product) {
@@ -43,10 +43,10 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     public boolean sortProductByPrice() {
-            List<Product> oldP = new ArrayList<>(repository.displayProducts());
-            repository.sortProductByPrice();
-            List<Product> newP = repository.displayProducts();
-            return !Objects.equals(oldP, newP);
+        List<Product> oldP = new ArrayList<>(repository.displayProducts());
+        repository.sortProductByPrice();
+        List<Product> newP = repository.displayProducts();
+        return !Objects.equals(oldP, newP);
     }
 
     public boolean sortProductByID() {
@@ -60,7 +60,7 @@ public class ProductManagerService implements IProductManagerService {
         return repository.displayProducts();
     }
 
-    public boolean checkByID(int id){
+    public boolean checkByID(int id) {
         return repository.checkIdProduct(id);
     }
 }

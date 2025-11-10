@@ -6,10 +6,10 @@ import pj12_JVCollectionFramework.service.ProductManagerService;
 import java.util.List;
 
 public class ProductManagerController {
-    ProductManagerService service;
+    private final ProductManagerService service;
 
-    public ProductManagerController(ProductManagerService service) {
-        this.service = service;
+    public ProductManagerController() {
+        service = new ProductManagerService();
     }
 
     public boolean addProduct(Product product){

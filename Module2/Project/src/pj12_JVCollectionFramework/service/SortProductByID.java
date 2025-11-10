@@ -1,4 +1,4 @@
-package pj12_JVCollectionFramework.repository;
+package pj12_JVCollectionFramework.service;
 
 import pj12_JVCollectionFramework.entity.Product;
 

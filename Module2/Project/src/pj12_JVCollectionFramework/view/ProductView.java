@@ -7,11 +7,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ProductView {
-    public Scanner scanner = new Scanner(System.in);
-    ProductManagerController controller;
+    private Scanner scanner = new Scanner(System.in);
+    private final ProductManagerController controller;
 
-    public ProductView(ProductManagerController controller) {
-        this.controller = controller;
+    public ProductView() {
+        controller = new ProductManagerController();
     }
 
     public void menu() {
