@@ -31,14 +31,17 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     public boolean updateProduct(Product product) {
+
         return repository.updateProduct(product);
     }
 
     public Product findProductById(int id) {
+
         return repository.findProductById(id);
     }
 
     public Product findProductByName(String name) {
+
         return repository.findProductByName(name);
     }
 
@@ -57,10 +60,12 @@ public class ProductManagerService implements IProductManagerService {
     }
 
     public List<Product> displayProducts() {
+
         return repository.displayProducts();
     }
 
     public boolean checkByID(int id) {
+
         return repository.checkIdProduct(id);
     }
 }
