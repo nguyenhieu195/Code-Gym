@@ -14,9 +14,16 @@ public class ProductManagerService implements IProductManagerService {
         repository = new ProductManagerRepository();
     }
 
-    public boolean addProduct(Product product) {
-        if (repository.checkIdProduct(product.getId())) {
-            return false;
+    //    public boolean addProduct(Product product){
+//        if (repository.checkIdProduct(product.getId())) {
+//            return false;
+//        }
+//        repository.addProduct(product);
+//        return true;
+//    }
+    public boolean addProduct(Product product) throws Exception {
+        if (repository.findProductById(product.getId()) != null) {
+            throw new Exception("ID đã tồn tại !");
         }
         repository.addProduct(product);
         return true;
@@ -64,8 +71,7 @@ public class ProductManagerService implements IProductManagerService {
         return repository.displayProducts();
     }
 
-    public boolean checkByID(int id) {
-
+    public boolean checkByID(int id){
         return repository.checkIdProduct(id);
     }
 }

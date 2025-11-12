@@ -62,6 +62,22 @@ public class ProductManagerRepository {
         return null;
     }
 
+    public Product findByPrice(float price){
+        for (Product product : products){
+            if(Objects.equals(product.getPrice(), price)) return product;
+        }
+        return null;
+    }
+    public List<Product> findByPriceAToB(float a, float b){
+        List<Product> list = new ArrayList<>();
+        for (Product product : products) {
+            if(product.getPrice() >= a && product.getPrice() <= b){
+                list.add(product);
+            }
+        }
+        return list;
+    }
+
     public void sortProductByPrice() {
         Collections.sort(products, new SortProductByPrice());
     }
@@ -73,4 +89,5 @@ public class ProductManagerRepository {
     public List<Product> displayProducts() {
         return products;
     }
+
 }

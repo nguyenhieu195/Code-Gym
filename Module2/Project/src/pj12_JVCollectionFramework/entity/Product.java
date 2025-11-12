@@ -4,11 +4,22 @@ public class Product {
     private Integer id;
     private String name;
     private Double price;
+    private static Integer nextID = 0;
 
-    public Product(Integer id, String name, Double price) {
+    public Product(String name, Double price) {
+        this.id = ++nextID;
+        this.name = name;
+        this.price = price;
+    }
+
+    public Product(int id, String name, Double price) {
         this.id = id;
         this.name = name;
         this.price = price;
+    }
+
+    public Product() {
+        this.id = nextID++;
     }
 
     @Override
@@ -44,6 +55,5 @@ public class Product {
         this.price = price;
     }
 
-    public Product() {
-    }
+
 }

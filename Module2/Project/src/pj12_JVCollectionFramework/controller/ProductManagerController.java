@@ -12,7 +12,7 @@ public class ProductManagerController {
         service = new ProductManagerService();
     }
 
-    public boolean addProduct(Product product){
+    public boolean addProduct(Product product) throws Exception{
         return service.addProduct(product);
     }
 

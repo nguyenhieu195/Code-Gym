@@ -65,22 +65,20 @@ public class ProductView {
     }
 
     private void addProduct() {
-        Random random = new Random();
         System.out.println("---- Add new product ----");
-        int id = random.nextInt(1000); // random 0–999
-//        System.out.print("ID: ");
-//        int id = Integer.parseInt(scanner.nextLine());
+        System.out.print("ID: ");
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.print("Enter name product: ");
         String name = scanner.nextLine();
         System.out.print("Enter price product: ");
         double price = Double.parseDouble(scanner.nextLine());
 
-        if (controller.checkById(id)) {
-            System.out.println("Add failed!");
-        } else {
+        try{
             Product product = new Product(id, name, price);
             controller.addProduct(product);
             System.out.println("Add success!");
+        }catch (Exception e){
+            System.err.println(e.getMessage());
         }
     }
 
