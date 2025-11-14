@@ -26,6 +26,7 @@ public class ProductView {
             System.out.println("7. Sort List Product By ID");
             System.out.println("8. Display Product");
             System.out.println("9. Read information from file");
+            System.out.println("10. Copy file");
             System.out.println("0. Exit");
             System.out.println("-------------------------------------------");
 
@@ -36,10 +37,10 @@ public class ProductView {
                 System.out.print("Enter your choice: ");
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
-                    if (choice >= 0 && choice <= 9) {
+                    if (choice >= 0 && choice <= 10) {
                         valid = true;
                     } else {
-                        System.err.println("Please enter a number between 0 and 7!");
+                        System.err.println("Please enter a number between 0 and 10!");
                     }
                 } catch (NumberFormatException e) {
                     System.err.println("Invalid input! Please enter a number.");
@@ -57,6 +58,7 @@ public class ProductView {
                 case 7 -> sortProductByID();
                 case 8 -> disPlay();
                 case 9 -> readFile("product.csv");
+                case 10 -> copyFileMenu();
                 case 0 -> {
                     System.out.println("Exit program...");
                     return; // thoát vòng lặp menu
@@ -178,6 +180,20 @@ public class ProductView {
             System.out.println("Đọc file thanh công .");
         }else{
             System.out.println("Chịuuuuuuu!");
+        }
+    }
+
+    private void copyFileMenu(){
+        System.out.println("Nhập file nguồn: ");
+        String source = scanner.nextLine();
+
+        System.out.println("Nhập file đích: ");
+        String target = scanner.nextLine();
+
+        if(controller.copyFile(source, target)){
+            System.out.println("Copy thành công!");
+        } else {
+            System.out.println("Copy thất bại!");
         }
     }
 }

@@ -5,7 +5,9 @@ import pj12_JVCollectionFramework.service.SortProductByID;
 import pj12_JVCollectionFramework.service.SortProductByPrice;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -112,5 +114,43 @@ public class ProductManagerRepository {
             System.out.println("Lỗi đọc file !");
         }
         return false;
+    }
+
+    public boolean copyFile(String sourcePath, String targetPath) {
+        File sourceFile = new File(sourcePath);
+        File targetFile = new File(targetPath);
+
+        // Kiểm tra file nguồn
+        if (!sourceFile.exists()) {
+            System.out.println("File nguồn không tồn tại!");
+            return false;
+        }
+
+        // Kiểm tra file đích
+        if (targetFile.exists()) {
+            System.out.println("File đích đã tồn tại, không thể ghi đè!");
+            return false;
+        }
+
+        int charCount = 0;
+
+        try (
+                FileReader reader = new FileReader(sourceFile);
+                FileWriter writer = new FileWriter(targetFile)
+        ) {
+            int c;
+            while ((c = reader.read()) != -1) {
+                writer.write(c);
+                charCount++;
+            }
+
+            System.out.println("Sao chép hoàn tất!");
+            System.out.println("Số ký tự đã copy: " + charCount);
+            return true;
+
+        } catch (Exception e) {
+            System.out.println("Lỗi khi sao chép file: " + e.getMessage());
+            return false;
+        }
     }
 }

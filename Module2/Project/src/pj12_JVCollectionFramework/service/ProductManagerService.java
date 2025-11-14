@@ -78,4 +78,8 @@ public class ProductManagerService implements IProductManagerService {
     public boolean readFile(String file){
         return repository.readFile(file);
     }
+
+    public boolean copyFile(String s, String t){
+        return repository.copyFile(s, t);
+    }
 }

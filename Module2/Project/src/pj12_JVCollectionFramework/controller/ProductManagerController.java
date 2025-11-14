@@ -51,4 +51,8 @@ public class ProductManagerController {
     public boolean readFile(String file) {
         return service.readFile(file);
     }
+
+    public boolean copyFile(String s, String t){
+        return service.copyFile(s, t);
+    }
 }
