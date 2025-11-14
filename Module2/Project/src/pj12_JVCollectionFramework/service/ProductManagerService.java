@@ -74,4 +74,8 @@ public class ProductManagerService implements IProductManagerService {
     public boolean checkByID(int id){
         return repository.checkIdProduct(id);
     }
+
+    public boolean readFile(String file){
+        return repository.readFile(file);
+    }
 }

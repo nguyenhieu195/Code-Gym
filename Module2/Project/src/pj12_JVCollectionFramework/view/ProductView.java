@@ -25,6 +25,7 @@ public class ProductView {
             System.out.println("6. Sort List Product By Price");
             System.out.println("7. Sort List Product By ID");
             System.out.println("8. Display Product");
+            System.out.println("9. Read information from file");
             System.out.println("0. Exit");
             System.out.println("-------------------------------------------");
 
@@ -35,7 +36,7 @@ public class ProductView {
                 System.out.print("Enter your choice: ");
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
-                    if (choice >= 0 && choice <= 8) {
+                    if (choice >= 0 && choice <= 9) {
                         valid = true;
                     } else {
                         System.err.println("Please enter a number between 0 and 7!");
@@ -55,6 +56,7 @@ public class ProductView {
                 case 6 -> sortProductByPrice();
                 case 7 -> sortProductByID();
                 case 8 -> disPlay();
+                case 9 -> readFile("product.csv");
                 case 0 -> {
                     System.out.println("Exit program...");
                     return; // thoát vòng lặp menu
@@ -168,5 +170,14 @@ public class ProductView {
     private void disPlay() {
         System.out.println("---- List All Product ----");
         controller.displayProducts().forEach(System.out::println);
+    }
+
+    private void readFile(String file){
+        System.out.println("Bạn muốn đọc file?");
+        if(controller.readFile(file)){
+            System.out.println("Đọc file thanh công .");
+        }else{
+            System.out.println("Chịuuuuuuu!");
+        }
     }
 }

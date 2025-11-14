@@ -4,6 +4,8 @@ import pj12_JVCollectionFramework.entity.Product;
 import pj12_JVCollectionFramework.service.SortProductByID;
 import pj12_JVCollectionFramework.service.SortProductByPrice;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,16 +64,17 @@ public class ProductManagerRepository {
         return null;
     }
 
-    public Product findByPrice(float price){
-        for (Product product : products){
-            if(Objects.equals(product.getPrice(), price)) return product;
+    public Product findByPrice(float price) {
+        for (Product product : products) {
+            if (Objects.equals(product.getPrice(), price)) return product;
         }
         return null;
     }
-    public List<Product> findByPriceAToB(float a, float b){
+
+    public List<Product> findByPriceAToB(float a, float b) {
         List<Product> list = new ArrayList<>();
         for (Product product : products) {
-            if(product.getPrice() >= a && product.getPrice() <= b){
+            if (product.getPrice() >= a && product.getPrice() <= b) {
                 list.add(product);
             }
         }
@@ -90,4 +93,24 @@ public class ProductManagerRepository {
         return products;
     }
 
+    public boolean readFile(String file) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = bufferedReader.readLine()) != null){
+                String[] part = line.split(",");
+
+                int id = Integer.parseInt(part[0].trim());
+                String name = part[1].replace("\"", "").trim();
+                Double price = Double.parseDouble(part[2].replace("\"", "").trim());
+
+                Product product = new Product(id, name, price);
+                products.add(product);
+            }
+
+            return true;
+        } catch (Exception e) {
+            System.out.println("Lỗi đọc file !");
+        }
+        return false;
+    }
 }

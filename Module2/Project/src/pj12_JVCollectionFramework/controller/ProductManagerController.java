@@ -12,31 +12,31 @@ public class ProductManagerController {
         service = new ProductManagerService();
     }
 
-    public boolean addProduct(Product product) throws Exception{
+    public boolean addProduct(Product product) throws Exception {
         return service.addProduct(product);
     }
 
-    public boolean removeProduct(int id){
+    public boolean removeProduct(int id) {
         return service.removeProduct(id);
     }
 
-    public boolean updateProduct(Product product){
+    public boolean updateProduct(Product product) {
         return service.updateProduct(product);
     }
 
-    public Product findProductById(int id){
+    public Product findProductById(int id) {
         return service.findProductById(id);
     }
 
-    public Product findProductByName(String name){
+    public Product findProductByName(String name) {
         return service.findProductByName(name);
     }
 
-    public boolean sortProductByPrice(){
+    public boolean sortProductByPrice() {
         return service.sortProductByPrice();
     }
 
-    public boolean sortProductByID(){
+    public boolean sortProductByID() {
         return service.sortProductByID();
     }
 
@@ -44,7 +44,11 @@ public class ProductManagerController {
         return service.displayProducts();
     }
 
-    public boolean checkById(int id){
+    public boolean checkById(int id) {
         return service.checkByID(id);
+    }
+
+    public boolean readFile(String file) {
+        return service.readFile(file);
     }
 }
