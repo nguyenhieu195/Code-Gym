@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+</body>
+<script>
+    let mang = [1, 4, 2, 6, 8, 0];
+    document.getElementById('display').innerHTML = "Mảng trước đảo ngược: " + mang + "<br>";
+
+    for (let i = 0, j = mang.length - 1; i < j; i++, j--) {
+        let temp = mang[i];
+        mang[i] = mang[j];
+        mang[j] = temp;
+    }
+
+    document.getElementById('display').innerHTML += "Mảng sau đảo ngược: " + mang;
+</script>
+
+</html>
+<!-- 
+    Viết một chương trình JavaScript thực hiện đảo ngược các giá trị trong một mảng đã cho. 
+    Không sử dụng phương thức reverse() có sẵn 
+ -->

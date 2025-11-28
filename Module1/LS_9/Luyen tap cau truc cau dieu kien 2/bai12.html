@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính lãi ngân hàng</title>
+</head>
+
+<body>
+    <h3>Tính lãi ngân hàng (lãi mẹ đẻ lãi con)</h3>
+    <p>
+        Công thức lãi kép: <br>
+        A = P * (1 + r)^n <br>
+        • P: số tiền ban đầu <br>
+        • r: lãi suất hàng tháng (%) <br>
+        • n: số tháng gửi <br>
+    </p>
+
+    Nhập số tiền ban đầu: <input type="text" id="tien"> triệu đồng <br>
+    Nhập số tháng gửi: <input type="text" id="thang"> tháng <br>
+    Nhập lãi suất hàng tháng: <input type="text" id="lai"> % <br><br>
+
+    <button onclick="tinh()">Tính</button>
+    <p id="display"></p>
+</body>
+
+<script>
+    function tinh() {
+        let tien = parseFloat(document.getElementById("tien").value);
+        let thang = parseInt(document.getElementById("thang").value);
+        let lai = parseFloat(document.getElementById("lai").value);
+
+        if (isNaN(tien) || tien <= 0 || isNaN(thang) || thang <= 0 || isNaN(lai) || lai < 0) {
+            alert("Vui lòng nhập dữ liệu hợp lệ !");
+            return;
+        }
+
+        lai = lai / 100; // đổi % sang số thập phân
+        let soTien = tien;
+
+        let i = 1;
+        while (i <= thang) {
+            soTien = soTien + soTien * lai; // lãi mẹ đẻ lãi con
+            i++;
+        }
+
+        let tongLai = soTien - tien;
+
+        document.getElementById("display").innerHTML =
+            `<b>Số tiền cuối cùng sau ${thang} tháng là: ${soTien.toFixed(2)} triệu <br>
+            Tổng lãi thu được: ${tongLai.toFixed(2)} triệu</b>`;
+    }
+</script>
+
+</html>

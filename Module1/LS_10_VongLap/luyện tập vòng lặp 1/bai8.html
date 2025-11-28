@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hãy thử đoán xem</title>
+</head>
+<body>
+    <button onclick="choi()">Chơi</button>
+</body>
+<script>
+    function choi(){
+        let q1 = Number(prompt('Nhập khoảng ban đầu'));
+        let q2 = Number(prompt('Nhập khoảng sau'));
+
+        let random =Math.floor(Math.random() * (q2 - q1)) + q1;
+
+        let inp = Number(prompt('Nhập số bạn muốn đoán'));
+
+        while(true){
+            if(random === inp){
+                alert('Chúc mừng bạn đã đoán đúng !');
+                break;
+            }else{
+                inp = Number(prompt("Bạn đã đoán sai! Bạn hãy đoán lại đi !"))
+            }
+        }
+    }
+</script>
+</html>
+<!-- 
+Bài 8: Game đoán số
+
+Nâng cấp game "Hãy thử đoán xem!"
+
+1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu chơi hoặc chơi lại 
+
+2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
+
+Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn 
+Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán 
+Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi 
+Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại. 
+-->

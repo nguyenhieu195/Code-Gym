@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a;
+        let check;
+        do{
+            check = true
+            a = +prompt('Nhap so nguyen duong muon tinh giai thua')
+            if(a <= 0){
+                alert('phai la so nguyen duong!')
+                check = false
+            }
+            if(isNaN(a)){
+                alert('phai la so !')
+                check = false
+            }
+        }while(check == false);
+        let giaithua = 1;
+        for(let i = 1; i <= a; i++){
+            giaithua *= i;
+        }
+        document.writeln('Giai thua cua ' + a + " la: " + giaithua);
+    </script>
+</body>
+</html>
+<!-- tính giai thừa của 1 số nguyên dương -->

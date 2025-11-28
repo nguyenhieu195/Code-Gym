@@ -1,0 +1,39 @@
+<!--
+    Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+    Điều kiện để a,b,c là cạnh của một tam giác là:
+    a,b,c > 0
+    a + b > c
+    b + c > a
+    a + c > b
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Kiểm tra 3 số thực nhập vào có phải là cạnh của 1 tam giác ?</h3>
+    <input type="text" id="a" placeholder="Nhập a" />
+    <input type="text" id="b" placeholder="Nhập b" />
+    <input type="text" id="c" placeholder="Nhập c" />
+    <button onclick="kiemtra()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function kiemtra() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+      let c = parseFloat(document.getElementById("c").value);
+        if(isNaN(a) || isNaN(b) || isNaN(c)){
+            alert('a,b,c phải là số !');
+        }
+      else if(a > 0 && b > 0 && c > 0 && (a + b > c) && (b + c > a) && (a + c > b)){
+        document.getElementById('display').innerHTML = "Là cạnh của 1 tam giác";
+      }else{
+        document.getElementById('display').innerHTML = "Không phải là cạnh của 1 tam giác";
+      }
+    }
+  </script>
+</html>

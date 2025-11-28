@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Sample Screen</h3>
+    <input type="text" id="temp">
+    <button onclick="add()">Add</button>
+    <button onclick="display()">Display</button>
+    <hr>
+    <div id="result"></div>
+</body>
+<script>
+    let arr = [];
+    function add() {
+        let temp = document.getElementById('temp').value;
+        arr.push(temp);
+    }
+    function display() {
+        for (let i = 0; i < arr.length; i++) {
+            document.getElementById('result').innerHTML += `Element ${i} = ` + arr[i] + "<br>";
+        }
+    }
+</script>
+
+</html>
+<!-- Viết một chương trình JavaScript để thêm vào các phần tử trong một mảng và hiển thị chúng. -->

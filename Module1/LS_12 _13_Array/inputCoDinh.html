@@ -1,0 +1,29 @@
+<!-- Khi người dùng gõ bàn phím thì một dòng chữ cố định sẽ lần lượt hiện ra. 
+ Cho dù người dùng gõ chữ nào thì cũng lần lượt hiện ra dòng chữ cố định đó. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="inp" placeholder="Nhap thi gi do..."></textarea>
+</body>
+<script>
+    const FAKE_INP = "Hieu dep trai vcl !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+    const INPUT = document.getElementById("inp");
+    let index = 0;
+    INPUT.addEventListener("keydown", function (e) {
+        e.preventDefault(); //ngăn kí tự xuất hiện
+
+        if (index < FAKE_INP.length) {
+            INPUT.value += FAKE_INP[index];
+            index++;
+        }
+    });
+</script>
+
+</html>

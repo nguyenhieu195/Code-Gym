@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" step="0.01" name="" id="num"> VND<br>
+    <button onclick="tinh()">Tinh</button>
+  </body>
+  <script>
+   function tinh(){
+    let doanhthu = document.getElementById('num').value;
+    if(doanhthu < 0){
+        alert("Bạn bị đuổi việc !")
+    }
+    else if(doanhthu < 50000000){
+        alert('Tien hoa hong cua ban la: ' + (doanhthu *2/100));
+    }else if(doanhthu < 100000000){
+        alert('Tien hoa hong cua ban la: ' + (doanhthu *5/100));
+    }else{
+        alert('Tien hoa hong cua ban la: ' + (doanhthu *10/100));
+    }
+   }
+  </script>
+</html>
+<!-- 
+    Doanh số bán hàng (VND)	            Tỷ lệ hoa hồng (%)
+    Từ 0 đến dưới 50 triệu	            2%
+    Từ 50 triệu đến dưới 100 triệu	    5%
+    Từ 100 triệu trở lên	            10%
+-->

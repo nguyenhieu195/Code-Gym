@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function ktra(arr, kitu) {
+            let dem = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (kitu == arr[i]) {
+                    dem++;
+                }
+            }
+            if (dem > 0) {
+                return dem;
+            }
+            return -1;
+        }
+
+        let a = [1, 5, 3, 4, 5];
+        let kitu = 5;
+        
+        document.writeln(ktra(a, kitu))
+    </script>
+</body>
+
+</html>
+<!-- Viết hàm nhận vào một mảng ký tự và một ký tự bất kỳ.
+Kiểm tra xem ký tự đó có nằm trong mảng hay không.
+Nếu có, trả về số lần xuất hiện; nếu không, trả về -1. -->

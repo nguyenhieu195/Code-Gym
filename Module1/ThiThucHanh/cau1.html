@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n;
+        do {
+            n = +prompt("Nhap so phan tu có trong mảng ( <= 50)");
+        } while (n > 50);
+
+        let a = [];
+
+        // nhap
+        for (let i = 0; i < n; i++) {
+            a[i] = +prompt("nhap phan tu thu " + (i + 1));
+        }
+
+        // in
+        for (let i = 0; i < a.length; i++) {
+            document.writeln(a[i]);
+        }
+        
+        let b = [];
+
+        // mang songuyento
+        for (let i = 0; i < a.length; i++) {
+            let temp = a[i];
+
+            if(temp > 1){
+                if(temp == 2){
+                    b.push(temp);
+                }
+                else{
+                    let check = true;
+                    for(let j = 2; j < temp; j++){
+                        if(temp % j == 0){
+                            check = false;
+                            break;
+                        }
+                    }
+                    if(check) b.push(temp);
+                }
+            }
+        }
+
+        document.writeln("<br>")
+        // in mang so nguyen to
+        for (let i = 0; i < b.length; i++) {
+            document.writeln(b[i]);
+        }
+    </script>
+</body>
+</html>

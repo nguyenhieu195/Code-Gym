@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tính diện tích hình chữ nhật</h1>
+    <input type="text" min="0" id="a" placeholder="Nhập chiều dài (mét)" />
+    <input
+      type="text"
+      min="0"
+      id="b"
+      placeholder="Nhập cạnh chiều rộng (mét)"
+    />
+    <button onclick="dientich()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function dientich() {
+      let a = Number(document.getElementById("a").value);
+      let b = Number(document.getElementById("b").value);
+      if (isNaN(a) || isNaN(b)) {
+        alert("Cả chiều dài và chiều rông phải là số !");
+      } else if (a > 0 && b > 0) {
+        let dientich = a * b;
+        document.getElementById("display").innerHTML =
+          "Diện tích hình chữ nhật có chiều rộng " +
+          a +
+          " và chiều dài " +
+          b +
+          " là: " +
+          dientich +
+          " mét vuông";
+      } else {
+        alert("Cả chiều dài và chiều rông phải lớn hơn 0!");
+      }
+    }
+  </script>
+</html>
+<!-- Tính diện tích hình chữ nhật khi biết 02 cạnh a, b. -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPirime(x) {
+            if(x < 2){
+                return false;
+            }
+            for(let i = 2; i < x; i++){
+                if(x % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let n;
+        do {
+            n = +prompt("Nhap so phan tu có trong mảng ( <= 50)");
+        } while (n > 50);
+
+        let arr = new Array(n);
+
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt("nhap phan tu thu " + (i + 1));
+        }
+
+        for (let i = 0; i < arr.length; i++) {
+            document.writeln(arr[i]);
+        }
+        let tongSNTvitri = 0;
+        if (n < 2) {
+            document.writeln("<br> khong co tong vi tri la cac so nguyen to!")
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                if (isPirime(i)) {
+                    tongSNTvitri += arr[i];
+                }
+            }
+            document.writeln("<br> tong cac phan tu co vi tri la so nguyen to : " + tongSNTvitri);
+        }
+
+    </script>
+</body>
+
+</html>

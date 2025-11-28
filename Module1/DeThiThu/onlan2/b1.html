@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let mang = [];
+        let n;
+        do {
+            n = +prompt("nhap so phan tu co trong mang (0 < n <= 50)");
+        } while (n < 1 || n > 50 || !Number.isInteger(n));
+
+        for (let i = 0; i < n; i++) {
+            mang[i] = +prompt('nhap phan tu thu ' + (i + 1));
+        }
+
+        for (let i = 0; i < mang.length; i++) {
+            document.writeln(mang[i]);
+        }
+
+        let tongViTriLaSNT = 0;
+        for (let i = 0; i < mang.length; i++) {
+            if (i == 2) {
+                tongViTriLaSNT += mang[i];
+            }
+            else if (i > 1) {
+                let check = true
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        check = false;
+                    }
+                }
+                if(check){
+                    tongViTriLaSNT += mang[i];
+                }
+            }
+        }
+
+        document.writeln("<br> Tong cac phan tu co vi tri la so nguyen to " + tongViTriLaSNT);
+
+    </script>
+</body>
+
+</html>

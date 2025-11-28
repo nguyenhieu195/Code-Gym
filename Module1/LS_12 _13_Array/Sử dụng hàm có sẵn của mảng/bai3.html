@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Nhap chuoi")
+        let result = '';
+
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] >= 'a' && a[i] <= 'z') {
+                result += a[i].toUpperCase();
+            }
+            else if (a[i] >= 'A' && a[i] <= 'Z') {
+                result += a[i].toLowerCase();
+            }
+            else {
+                result += a[i]
+            }
+        }
+        document.writeln(result)
+    </script>
+</body>
+
+</html>

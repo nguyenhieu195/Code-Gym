@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class NhietDo {
+            doC;
+
+            constructor(doC) {
+                if (doC < -273) {
+                    throw new Error("Nhiệt độ không thể nhỏ hơn -273°C (độ không tuyệt đối).");
+                }
+                this.doC = doC;
+            }
+
+            doC_sang_doF() {
+                return this.doC * 9 / 5 + 32;
+            }
+            doC_sang_doK() {
+                return this.doC + 273.15;
+            }
+        }
+        try {
+            let nhietDo = new NhietDo(-32);
+            console.log('do C: ' + nhietDo.doC);
+            console.log('do F: ' + nhietDo.doC_sang_doF());
+            console.log('do K: ' + nhietDo.doC_sang_doK());
+        } catch (err) {
+            console.error(err.message);
+        }
+
+    </script>
+</body>
+
+</html>

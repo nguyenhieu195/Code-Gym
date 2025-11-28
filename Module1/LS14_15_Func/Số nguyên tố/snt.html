@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="ktraSNT.js">
+    </script>
+    <script>
+        let num = +prompt("Nhap so muon kiem tra")
+        if (isNaN(num)) {
+            alert("Phai la so !")
+        } else {
+            if (isPrime(num)) {
+                alert("la so nguyen to")
+            } else {
+                alert("khong phai so nguyen to")
+            }
+        }
+    </script>
+</body>
+
+</html>

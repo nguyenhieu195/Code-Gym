@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button style="background-color: #4e87e3;color: aliceblue; height: 50px; width: 150px; font-size: 15px"
+        onclick="themSoTietKiem()">Thêm sổ mới</button>
+    <button style="background-color: #e3514e; color: aliceblue; height: 50px; width: 150px; font-size: 15px"
+        onclick="xoaSoTietKiem()">Xoá sổ tiết kiệm</button>
+
+    <h1>Danh sach So tiet kiem</h1>
+
+    <table style="border-collapse: collapse;background-color: #4e87e3; color: rgb(249, 249, 249);" border="1"
+        width="100%" id="bangso">
+        <thead>
+            <tr>
+                <th>Ma so</th>
+                <th>Loai tiet kiem</th>
+                <th>Ho ten khach hang</th>
+                <th>Chung minh nhan dan</th>
+                <th>Ngay mo so</th>
+                <th>So tien gui</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+    <script>
+        let SoTietKiem = [];
+        class SOTIETKIEM {
+            maSo;
+            loaiTietKiem;
+            hoTenKhachHang;
+            chungMinhNhanDan;
+            ngayMoSo;
+            soTienGui;
+
+            constructor(maSo, loaiTietKiem, hoTenKhachHang, chungMinhNhanDan, ngayMoSo, soTienGui) {
+                this.maSo = maSo;
+                this.loaiTietKiem = loaiTietKiem;
+                this.hoTenKhachHang = hoTenKhachHang;
+                this.chungMinhNhanDan = chungMinhNhanDan;
+                this.ngayMoSo = ngayMoSo;
+                this.soTienGui = soTienGui;
+            }
+
+            getMaSo() {
+                return this.maSo;
+            }
+            getLoaiTietKiem() {
+                return this.loaiTietKiem;
+            }
+            getHoTenKhachHang() {
+                return this.hoTenKhachHang;
+            }
+            getChungMinhNhanDan() {
+                return this.chungMinhNhanDan;
+            }
+            getNgayMoSo() {
+                return this.ngayMoSo;
+            }
+            getSoTienGui() {
+                return this.soTienGui;
+            }
+            toString() {
+                return `So tiet kiem [Ma so: ${this.maSo}, Loai tiet kiem: ${this.loaiTietKiem}, Ho ten khach hang: ${this.hoTenKhachHang}, Chung minh nhan dan: ${this.chungMinhNhanDan}, Ngay mo so: ${this.ngayMoSo}, So tien gui: ${this.soTienGui}]`;
+            }
+
+
+        }
+
+
+        function hienThiSoTietKiem() {
+            const tBody = document.querySelector("#bangso tbody");
+            tBody.innerHTML = "";
+
+            SoTietKiem.forEach((sv, index) => {
+                const row = document.createElement("tr"); // tạo 1 hàng
+                row.innerHTML = `
+                    <td>${sv.getMaSo()}</td>
+                    <td>${sv.getLoaiTietKiem()}</td>
+                    <td>${sv.getHoTenKhachHang()}</td>
+                    <td>${sv.getChungMinhNhanDan()}</td>
+                    <td>${sv.getNgayMoSo()}</td>
+                    <td>${sv.getSoTienGui()}</td>
+                `;
+
+                tBody.appendChild(row);
+            });
+        }
+        function themSoTietKiem() {
+            let maSo;
+            let loaiTietKiem;
+            let hoTenKhachHang;
+            let chungMinhNhanDan;
+            let ngayMoSo;
+            let soTienGui;
+
+            do {
+                maSo = +prompt("Nhap ma so: ")
+            } while (maSo.length > 5);
+
+            do {
+                loaiTietKiem = prompt("Nhap loai tiet kiem: ")
+            } while (loaiTietKiem.length > 10);
+
+            do {
+                hoTenKhachHang = prompt("Nhap ho ten khach hang: ")
+            } while (hoTenKhachHang.length > 30);
+
+            do {
+                chungMinhNhanDan = +prompt("Nhap chung minh nhan dan: ")
+            } while (!Number(chungMinhNhanDan));
+
+            do {
+                ngayMoSo = prompt("Nhap ngay mo so: ")
+            } while (!Date(ngayMoSo));
+
+            do {
+                soTienGui = prompt("Nhap so tien gui: ")
+            } while (!Number(soTienGui));
+
+            let stk = new SOTIETKIEM(maSo, loaiTietKiem, hoTenKhachHang, chungMinhNhanDan, ngayMoSo, soTienGui)
+            SoTietKiem.push(stk);
+            alert("Da them thanh cong so");
+            hienThiSoTietKiem();
+        }
+
+        function xoaSo(index) {
+            SoTietKiem.splice(index, 1);
+        }
+        function xoaSoTietKiem() {
+            let index;
+            let check = true;
+            do {
+                index = +prompt("Nhap mã sổ mà bạn muốn xoá: ");
+            } while (!Number(index));
+
+            for (let i = 0; i < SoTietKiem.length; i++) {
+                if (SoTietKiem[i].getMaSo() == index) {
+                    let x;
+                    x = +prompt("Bạn có chắc muốn xoá không : Có(1), Không(0)");
+
+                    if (x == 1) {
+                        xoaSo(SoTietKiem[i]);
+                    }
+                    else {
+                        check = true;
+                        break;
+                    }
+                    check = true;
+                }
+                else {
+                    check = false;
+                }
+            }
+
+            if (!check) {
+                alert("Ma so khong dung hoac khogn co trong danh sach, vui long nhap lai!: ");
+            }
+            hienThiSoTietKiem();
+        }
+
+    </script>
+</body>
+
+</html>

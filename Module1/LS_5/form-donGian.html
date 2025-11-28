@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 300px;
+        background-color: #d5feff;
+        display: flex;
+        justify-content: center; /* căn ngang */
+        align-items: center; /* căn dọc */
+      }
+      .t {
+        background-color: white;
+        width: 40%;
+      }
+      .t1 {
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+      }
+      input {
+        border-radius: 0;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" class="t">
+        <div
+          style="
+            text-align: center;
+            background-color: #ff4c00;
+            color: white;
+            font-family: Arial;
+            font-size: 30px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98%;
+            margin-left: 7px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+          "
+        >
+          <p>SỞ THÍCH CỦA BẠN</p>
+        </div>
+        <div class="">
+          <table>
+            <tr>
+              <td class="t1">Họ và tên</td>
+              <td><input type="text" size="30" name="" id="" /></td>
+            </tr>
+            <tr>
+              <td class="t1">Email</td>
+              <td><input type="text" name="" id="" /></td>
+            </tr>
+            <tr>
+              <td class="t1">Sở thích</td>
+              <td>
+                <table>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Thể thao</td>
+                    <td><input type="checkbox" name="" id="" />Âm nhạc</td>
+                    <td><input type="checkbox" name="" id="" />Đọc sách</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Lướt web</td>
+                    <td><input type="checkbox" name="" id="" />Chơi game</td>
+                    <td><input type="checkbox" name="" id="" />Điện ảnh</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id="" />Du lịch</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <input
+                  type="submit"
+                  name=""
+                  id=""
+                  value="Gửi thông tin"
+                  style="margin-right: 5px"
+                /><input type="reset" name="" id="" value="Nhập lại" />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

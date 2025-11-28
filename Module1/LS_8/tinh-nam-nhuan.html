@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="inp" />
+    <button type="button" onclick="kiemtra()">Kiểm tra</button>
+  </body>
+  <script>
+    function kiemtra() {
+        let year = document.getElementById('inp').value;
+        if(year % 4 == 0 && year % 100 != 0){
+            alert("Là năm nhuận");
+        }
+        else if(year % 100 == 0 && year % 400 == 0){
+            alert("Là năm nhuận");
+        }
+        else{
+            alert("Không phải là năm nhuận");
+        }
+    }
+  </script>
+</html>

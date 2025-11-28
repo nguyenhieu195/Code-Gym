@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = ["hieu", "tai", 'huy', 'hung'];
+        let b = prompt("Nhap ten nguoi muon tim")
+        let check = false
+        let temp;
+        for(let i = 0; i < a.length; i++){
+            if(a[i] === b){
+                check = true;
+                alert(`${a[i]} nam o vi tri thu ${i + 1}`)
+            }
+        }
+        if(!check){
+            alert(`khong tim thay`)
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    Viết một chương trình JavaScript để tìm một giá tri 
+    được nhập vào từ hộp thoại có nằm trong mảng hay không. 
+    Nếu có in ra vị trí của phần tử đó. 
+    Trong trường hợp không tìm thấy thông báo không tìm thấy phần tử. 
+ -->

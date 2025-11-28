@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tính diện tích hình tam giác vuông</h1>
+    <input type="text" min="0" id="a" placeholder="Nhập cạch kề a (mét)" />
+    <input type="text" min="0" id="b" placeholder="Nhập cạnh kề b (mét)" />
+    <button onclick="dientich()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function dientich() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+    
+      if (a > 0 && b > 0 && !isNaN(a) && !isNaN(b)) {
+        let dientich = (1 / 2) * a * b;
+        document.getElementById("display").innerHTML = "Diện tích hình tam giác vuông này là: " + dientich + " mét vuông";
+      } else {
+        alert("Cả 2 cạnh phải là số và lớn hơn 0!");
+      }
+    }
+  </script>
+</html>

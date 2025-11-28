@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Giải phương trình bậc 2 (ax^2 + bx + c = 0)</h1>
+    <input type="text" id="a" placeholder="Nhập a" />
+    <input type="text" id="b" placeholder="Nhập b" />
+    <input type="text" id="c" placeholder="Nhập c" />
+    <button onclick="phuongtrinh()">Tính</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function phuongtrinh() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+      let c = parseFloat(document.getElementById("c").value);
+      if (isNaN(a) || isNaN(b) || isNaN(c)) {
+        alert("a,b,c phải là số");
+      } else if (a == 0) {
+        alert("không phải phương trình bậc 2 !");
+      } else {
+        let delta = b * b - 4 * a * c;
+
+        if (delta > 0) {
+          let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+          let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+          document.getElementById(
+            "display"
+          ).innerHTML = `Phương trình ${a}x^2 + ${b}x + ${c} = 0 có 2 nghiệm: x1 = ${x1}, x2 =  ${x2}`;
+        } else if (delta == 0) {
+          document.getElementById(
+            "display"
+          ).innerHTML = `Phương trình ${a}x^2 + ${b}x + c = 0 có 1 nghiệm kép: x = ${
+            -b / (2 * a)
+          }`;
+        } else {
+          document.getElementById("display").innerHTML =
+            "Phương trình vô nghiệm !";
+        }
+      }
+    }
+  </script>
+</html>
+<!-- Giải phương trình bậc 2. -->

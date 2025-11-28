@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tieude">
+            <p>Quản Lý Sinh Viên</p>
+        </div>
+        <form class="qlSinhVien" id="themsinhvien">
+            <h1>Quản Lý Sinh Viên</h1>
+
+            <div class="themsinhvien">
+                <table>
+                    <tr>
+                        <td>Mã số sinh viên: </td>
+                        <td><input class="inp" type="text" name="" id="mssv" required></td>
+                    </tr>
+                    <tr>
+                        <td>Họ và tên: </td>
+                        <td><input class="inp" type="text" name="" id="hoten" required></td>
+                    </tr>
+                    <tr>
+                        <td>Chuyên ngành:</td>
+                        <td><select name="" id="chuyennganh" required>
+                                <option value="">Chọn chuyên ngành</option>
+                                <option value="Công nghệ thông tin">Công nghệ thông tin</option>
+                                <option value="Khoa học máy tính">Khoa học máy tính</option>
+                                <option value="Quản trị kinh doanh">Quản trị kinh doanh</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Logistics">Logistics</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày sinh: </td>
+                        <td><input class="inp" type="date" name="" id="ngaysinh" required></td>
+                    </tr>
+                    <tr>
+                        <td>Quê quán: </td>
+                        <td><input class="inp" type="text" name="" id="quequan" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input class="inp" type="text" name="" id="email" required
+                                pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" title="Email phải có @ và đúng định dạng"></td>
+                    </tr>
+                    <tr>
+                        <td>Số điện thoại: </td>
+                        <td><input class="inp" type="text" name="" id="sdt" required pattern="^[0-9]{10,11}$"
+                                title="Số điện thoại chỉ được nhập số và từ 10-11 chữ số"></td>
+                    </tr>
+                    <tr>
+                        <td>Giới tính: </td>
+                        <td>
+                            <input type="radio" id="gioitinh" name="gioitinh" value="Nam" required>Nam
+                            <input type="radio" id="gioitinh" name="gioitinh" value="Nữ">Nữ
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Thêm sinh viên" style="color: white;"></input>
+                <input type="reset" value="Huỷ" style="background-color: rgb(226, 67, 67); color: white;"></input>
+            </div>
+        </form>
+        <div class="dsSinhVien">
+            <h1>Danh sách sinh viên</h1>
+            <div
+                style="width:100%; display:flex; align-items:center; justify-content: center; margin-bottom: 10px; gap: 8px;">
+                <input class="inp" type="text" id="timkiem" placeholder="Tìm sinh viên...">
+            </div>
+            <table border="1" width="100%" id="bangsinhvien">
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ tên</th>
+                        <th>Chuyên ngành</th>
+                        <th>Ngày sinh</th>
+                        <th>Quê quán</th>
+                        <th>Email</th>
+                        <th>SĐT</th>
+                        <th>Giới tính</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<!-- <script src="QLsv.js"></script> -->
+ <script>
+    class SinhVien {
+  mssv;
+  hoten;
+  chuyennganh;
+  ngaysinh;
+  quequan;
+  email;
+  sdt;
+  gioitinh;
+
+  constructor(
+    mssv,
+    hoten,
+    chuyennganh,
+    ngaysinh,
+    quequan,
+    email,
+    sdt,
+    gioitinh
+  ) {
+    this.mssv = mssv;
+    this.chuyennganh = chuyennganh;
+    this.hoten = hoten;
+    this.ngaysinh = ngaysinh;
+    this.quequan = quequan;
+    this.email = email;
+    this.sdt = sdt;
+    this.gioitinh = gioitinh;
+  }
+
+  setMssv(mssv) {
+    this.mssv = mssv;
+  }
+  setHoTen(hoten) {
+    this.hoten = hoten;
+  }
+  setChuyenNganh(chuyennganh) {
+    this.chuyennganh = chuyennganh;
+  }
+  setNgaySinh(ngaysinh) {
+    this.ngaysinh = ngaysinh;
+  }
+  setQueQuan(quequan) {
+    this.quequan = quequan;
+  }
+  setEmail(email) {
+    this.email = email;
+  }
+  setSdt(sdt) {
+    this.sdt = sdt;
+  }
+  setGioiTinh(gioitinh) {
+    this.gioitinh = gioitinh;
+  }
+
+  getMssv() {
+    return this.mssv;
+  }
+  getHoten() {
+    return this.hoten;
+  }
+  getChuyenNganh() {
+    return this.chuyennganh;
+  }
+  getNgaySinh() {
+    return this.ngaysinh;
+  }
+  getQueQuan() {
+    return this.quequan;
+  }
+  getEmail() {
+    return this.email;
+  }
+  getStd() {
+    return this.sdt;
+  }
+  getGioiTinh() {
+    return this.gioitinh;
+  }
+}
+ 
+let danhSachSV = [];
+let editingIndex = -1;
+
+// Hiển thị ra danh sách sinh viên ở bảng
+function hienThiSinhVien(){
+  const tBody = document.querySelector('#bangsinhvien tbody'); // lấy phần body ở bảng
+  tBody.innerHTML = "";
+
+  danhSachSV.forEach((sv, index) => {
+    const row = document.createElement('tr'); // tạo 1 hàng
+    row.innerHTML = `
+      <td>${sv.getMssv()}</td>
+      <td>${sv.getHoten()}</td>
+      <td>${sv.getChuyenNganh()}</td>
+      <td>${sv.getNgaySinh()}</td>
+      <td>${sv.getQueQuan()}</td>
+      <td>${sv.getEmail()}</td>
+      <td>${sv.getStd()}</td>
+      <td>${sv.getGioiTinh()}</td>
+      <td>
+        <button style="background-color: #58a9ffff" onclick="suaSinhVien(${index})">Sửa</button>
+        <button style="background-color: #fd4141ff" onclick="xoaSinhVien(${index})">Xoá</button>
+      </td>
+      `;
+
+      tBody.appendChild(row); // thêm hàng vào bảng
+
+  });
+}
+
+function themSinhVien(sv){
+  danhSachSV.push(sv);
+  hienThiSinhVien();
+}
+
+function xoaSinhVien(index){
+  danhSachSV.splice(index, 1);
+  hienThiSinhVien();
+}
+
+function suaSinhVien(index){
+  const sv = danhSachSV[index];
+
+  editingIndex = index;
+
+  document.getElementById('mssv').value = sv.getMssv();
+  document.getElementById('hoten').value = sv.getHoten();
+  document.getElementById('chuyennganh').value = sv.getChuyenNganh();
+  document.getElementById('ngaysinh').value = sv.getNgaySinh();
+  document.getElementById('quequan').value = sv.getQueQuan();
+  document.getElementById('email').value = sv.getEmail();
+  document.getElementById('sdt').value = sv.getStd();
+  document.querySelector(`input[name='gioitinh'][value='${sv.getGioiTinh()}']`).checked = true;
+}
+
+document.addEventListener("DOMContentLoaded", function(){  
+  const form = document.getElementById("themsinhvien");
+  const timkiem = document.getElementById('timkiem');
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    const mssv = document.getElementById('mssv').value.trim();
+    const hoten = document.getElementById('hoten').value.trim();
+    const chuyennganh = document.getElementById('chuyennganh').value;
+    const ngaysinh = document.getElementById('ngaysinh').value.trim();
+    const quequan = document.getElementById('quequan').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const sdt = document.getElementById('sdt').value.trim();
+    const gioitinh = document.querySelector('input[name="gioitinh"]:checked').value;
+        if (!gioitinh) {
+      alert("Vui lòng chọn giới tính!");
+      return;
+    }
+
+    const sv = new SinhVien(mssv, hoten, chuyennganh, ngaysinh, quequan, email, sdt, gioitinh);
+    console.log("index: ", editingIndex);
+    if(editingIndex === -1){
+      themSinhVien(sv);
+
+    }else{
+      danhSachSV[editingIndex] = sv;
+      editingIndex = -1;
+      hienThiSinhVien();
+
+    }
+
+    form.reset();
+  });
+
+  timkiem.addEventListener('keyup', function(){
+  const keyword = timkiem.value.toLowerCase();
+    const rows = document.querySelectorAll('#bangsinhvien tbody tr');
+
+    rows.forEach(row => {
+  const mssv = row.cells[0].innerText.toLowerCase();
+  const hoten = row.cells[1].innerText.toLowerCase();
+
+  if(mssv.includes(keyword) || hoten.includes(keyword)) {
+        row.style.display = '';
+      }else{
+        row.style.display = "none";
+      }
+    })
+  })
+});
+
+ </script>
+
+</html>

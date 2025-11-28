@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="inp">
+        <input type="text" name="" id="result" />
+      </div>
+      <div class="grid">
+        <!-- Hàng 1 -->
+        <button onclick="rad()">Rad</button>
+        <button onclick="chucNang()">⠿</button>
+        <button onclick="giaThua()">x!</button>
+        <button onclick="ngoacTrai()">(</button>
+        <button onclick="ngoacPhai()">)</button>
+        <button onclick="phanTram()">%</button>
+        <button onclick="xoa()">AC</button>
+
+        <!-- Hàng 2 -->
+        <button onclick="inv()">Inv</button>
+        <button onclick="sin()">sin</button>
+         <button onclick="ln()">ln</button>
+        <button onclick="number('7')">7</button>
+         <button onclick="number('8')">8</button>
+        <button onclick="number('9')">9</button>
+        <button onclick="chia()">÷</button>
+
+        <!-- Hàng 3 -->
+        <button onclick="pi()">π</button>
+         <button onclick="cos()">cos</button>
+        <button onclick="log()">log</button>
+        <button onclick="number('4')">4</button>
+        <button onclick="number('5')">5</button>
+         <button onclick="number('6')">6</button>
+        <button onclick="nhan()">×</button>
+
+        <!-- Hàng 4 -->
+        <button onclick="e()">e</button>
+         <button onclick="tan()">tan</button>
+         <button onclick="canBacHai()">√</button>
+        <button onclick="number('1')">1</button>
+        <button onclick="number('2')">2</button>
+        <button onclick="number('3')">3</button>
+         <button onclick="tru()">−</button>
+
+         <!-- Hàng 5 -->
+        <button onclick="ans()">Ans</button>
+        <button onclick="exp()">EXP</button>
+        <button onclick="luyThua()">xʸ</button>
+         <button onclick="number('0')">0</button>
+        <button onclick="number('.')">.</button>
+        <button
+           onclick="bang()"
+          style="background-color: #4789f9; color: white"
+        >
+          =
+        </button>
+        <button onclcó hết ick="cong()">+</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    function number(num){
+        document.getElementById("result").value += num;
+    }
+    function cong(){
+        document.getElementById("result").value += " + ";
+    }
+    function tru(){
+        document.getElementById("result").value += " - ";
+    }
+    function nhan(){
+        document.getElementById("result").value += " * ";
+    }
+    function chia(){
+        document.getElementById("result").value += " / ";
+    }
+    function bang(){
+        let ketqua = eval(document.getElementById("result").value);
+        document.getElementById("result").value = ketqua;
+    }
+    function xoa(){
+        document.getElementById("result").value = "";
+    }
+
+  </script>
+</html>

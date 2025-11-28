@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kiemtra(chuoi) {
+            let inhoa = 0;
+            let inthuong = 0;
+
+            for (let i = 0; i < chuoi.length; i++) {
+                let ch = chuoi[i];
+                if (ch >= 'A' && ch <= 'Z') {
+                    inhoa++;
+                }
+                else if (ch >= 'a' && ch <= 'z') {
+                    inthuong++;
+                }
+            }
+            let newchuoi = [inhoa, inthuong];
+            return newchuoi;
+        }
+        let chuoi = "nguyeN vAN HieU"
+        console.log(kiemtra(chuoi));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      step="0.01"
+      name=""
+      id="num1"
+      placeholder="Nhap diem bai kiem tra"
+    />
+    <input type="number" step="0.01" id="num2" placeholder="Nhap diem thi gia ki" />
+    <input
+      type="number"
+      step="0.01"
+      name=""
+      id="num3"
+      placeholder="Nhap diem thi cuoi ki"
+    />
+    <button onclick="tinh()">Kiem tra</button>
+    <p id="display"></p>
+  </body>
+  <script>
+    function tinh() {
+      let dKT = document.getElementById("num1").value;
+      let dGK = document.getElementById("num2").value;
+      let dCK = document.getElementById("num3").value;
+      if (
+        dKT >= 0 &&
+        dKT <= 10 &&
+        dCK >= 0 &&
+        dCK <= 10 &&
+        dGK >= 0 &&
+        dGK <= 10
+      ) {
+        let dtb = parseFloat((dCK + dGK + dKT) / 3);
+        if (dtb <= 3) {
+          document.getElementById("display").innerHTML = "Hoc luc Kem";
+        } else if (dtb <= 4) {
+          document.getElementById("display").innerHTML = "Hoc luc Yeu";
+        } else if (dtb <= 6) {
+          document.getElementById("display").innerHTML = "Hoc luc Trung binh";
+        } else if (dtb <= 8.5) {
+          document.getElementById("display").innerHTML = "Hoc luc Kha";
+        } else {
+          document.getElementById("display").innerHTML = "Hoc luc Gioi";
+        }
+      } else {
+        document.getElementById("display").innerHTML = "Diem khong hop le !";
+      }
+    }
+  </script>
+</html>
+<!-- Xếp loại học lực của học sinh dựa trên:
+    Điểm bài kiểm tra.
+    Điểm thi giữa kỳ.
+    Điểm thi cuối kỳ.
+-->

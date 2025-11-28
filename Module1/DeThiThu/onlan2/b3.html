@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isFibo(num) {
+            let sotruoc = 0;
+            let sotruoctruoc = 1;
+            let fibo = 0;
+
+            if(num == 0 || num == 1) return true;
+
+            while(fibo < num){
+                fibo = sotruoc + sotruoctruoc;
+ 
+                sotruoctruoc = sotruoc;
+                sotruoc = fibo;
+            }
+            
+            return fibo == num;
+        }
+
+        function kiemtra(a) {
+            let newA = [];
+            for (let i = 0; i < a.length; i++) {
+                if(isFibo(a[i])){
+                    newA.push(a[i]);
+                }
+            }
+            return newA;
+        }
+
+        let a = [1,5,6,13,9,12,8,0,5,1];
+        a.sort((a,b)=> a-b);
+        console.log(kiemtra(a));
+    </script>
+</body>
+
+</html>

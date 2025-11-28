@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [0,2,5,4,6,5,8,2]
+        let result = '';
+        for(let i = 0; i < a.length; i++){
+            result += a[i];
+            if(a[i] % 2 == 0 && a[i+1] % 2 == 0){
+                result += "-"
+            }
+        }
+        document.writeln(result)
+    </script>
+</body>
+</html>
+<!-- Viết chương trình nhận một chuỗi số nhập vào từ người dùng 
+ và chèn dấu - giữa hai số chẵn liên tiếp trong chuỗi. -->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ["mot", "hai", "ba"];
+        console.log("Mảng ban đầu: " + arr);
+
+        // truy xuất mảng
+        arr[1] = "bon";
+        console.log("Mảng sau khi gán 'mot' = 'bon': " + arr);
+
+        // thêm phần tử vào mảng
+        arr.push("nam"); // thêm phần tử vào cuối mảng --> dùng .push()
+        console.log("Mảng sau khi thêm phan tu 'nam' vào cuối: " + arr);
+
+        arr.unshift("khong"); // thêm phần tử vào đầu mảng --> dùng .unshift()
+        console.log("Mảng sau khi thêm phan tu 'khong' vào đầu: " + arr);
+
+        // lấy độ dài của mảng
+        console.log("Độ dài của mảng là: " + arr.length) // đếm độ dài của mảng
+
+        // xoá phần tử trong mảng
+        arr.pop(); // xoá phần tử cuối của mảng --> dùng .pop()
+        console.log("Mảng sau khi xoá phần tử cuối: " + arr)
+
+        arr.shift(); // xoá phần tử đầu của mảng --> dùng .shift()
+        console.log("Mảng sau khi xoá phần tử đầu: " + arr)
+
+        // sắp xếp và xử lí mảng
+        arr.sort(); // sắp xếp thứ tự bảng chữ cái
+        console.log("Mảng sau khi sắp xếp a->b: " + arr)
+
+        arr.reverse(); // đảo ngược mảng
+        console.log("Mảng sau khi đảo ngược: " + arr)
+
+        // sắp xếp mảng số
+        let nums = [3,7,4,9]; 
+        nums.sort((a,b) => a - b); // sắp xếp tăng dần trong mảng số
+        console.log("Mảng số sau khi sắp xếp tăng dần: " + nums)
+
+        nums.sort((a,b) => b - a); // sắp xếp dảm dần trong mảng số
+        console.log("Mảng số sau khi sắp xếp dảm dần: " + nums)
+
+    </script>
+</body>
+
+</html>
