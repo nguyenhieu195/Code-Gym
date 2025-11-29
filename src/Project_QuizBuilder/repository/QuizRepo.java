@@ -9,7 +9,8 @@ import java.util.Objects;
 
 public class QuizRepo {
 
-    private static final String FILE_PATH = "src/Project_QuizBuilder/data/quiz.csv";
+    private static final String FILE_PATH = "src/Project_QuizBuilder/data/quiz" +
+            ".csv";
 
     private List<Quiz> quizLists;
 
