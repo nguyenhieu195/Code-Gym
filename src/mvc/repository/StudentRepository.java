@@ -19,7 +19,7 @@ public class StudentRepository {
 
 
     public List<Student> findAll() {
-        File file = new File("src/mvc/data/student.csv");
+        File file = new File("mvc/data/student.csv");
         List<Student> students = new ArrayList<>();
 //        try with resources (Java 8)
         try ( FileReader fileReader = new FileReader(file);
@@ -37,7 +37,7 @@ public class StudentRepository {
     }
 
     public void save(Student student) {
-        File file = new File("src/mvc/data/student.csv");
+        File file = new File("mvc/data/student.csv");
         try (FileWriter fileWriter = new FileWriter(file, true);
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             bufferedWriter.write(convertStudentToString(student));
