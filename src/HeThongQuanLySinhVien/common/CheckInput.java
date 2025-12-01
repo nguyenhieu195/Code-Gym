@@ -1,4 +1,4 @@
-package QLhoaDonTienDien.common;
+package HeThongQuanLySinhVien.common;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -19,10 +19,10 @@ public class CheckInput {
             try {
                 System.out.print(mess);
                 date = scanner.nextLine();
-                dob = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+                dob = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 break;
             } catch (DateTimeParseException e) {
-                System.out.println("Vui lòng nhập đúng định dạng yyyy-MM-dd");
+                System.out.println("Vui lòng nhập đúng định dạng dd/MM/yyyy");
             }
         }
         return dob;

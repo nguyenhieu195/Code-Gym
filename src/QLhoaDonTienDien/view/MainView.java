@@ -134,11 +134,15 @@ public class MainView {
     }
 
     private void ChinhSuaHoaDon() {
+
         System.out.println("----- SỬA HOÁ ĐƠN -----");
-        HienThiThongTinKH();
+        for (HoaDon hoaDon : repoHoaDon.getListHoaDon()) {
+            System.out.println(hoaDon.toString());
+        }
         int maKH = input.inputPositiveInt("Nhập mã khách hàng để  hoá đơn: ");
         KhachHang khachHang = repoKhachHang.getById(maKH);
         if (khachHang == null) {
+            System.out.println("Khách hàng không tồn tại!");
             return;
         }
         LocalDate ngayRaHoaDon = input.getDate("Nhập ngày ra hoá đơn: ");
@@ -156,13 +160,32 @@ public class MainView {
             thanhTien = soluongTieuThu * donGia;
         }
         try {
-            repoHoaDon.themHoaDon(new HoaDon(maKH, ngayRaHoaDon, soluongTieuThu, donGia, thanhTien));
+            repoHoaDon.suaHoaDon(new HoaDon(repoHoaDon.getHoaDon(maKH).getMaHD(), maKH, ngayRaHoaDon, soluongTieuThu, donGia, thanhTien));
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
 
     private void ChiTietHoaDon() {
+        System.out.println("----- CHI TIẾT HOÁ ĐƠN -----");
+        for (HoaDon hoaDon : repoHoaDon.getListHoaDon()) {
+            System.out.println(hoaDon.toString());
+        }
+        int maKH = input.inputPositiveInt("Nhập mã Khách hàng muốn xmem hoá đơn chi tiết: ");
+        HoaDon hoaDon = repoHoaDon.getHoaDonByKH(maKH);
+        KhachHang khachHang = repoKhachHang.getById(maKH);
+        if (hoaDon == null) {
+            System.out.println("Khách hàng không tồn tại!");
+            return;
+        }
+
+        System.out.println("Mã Hoá đơn: " +  hoaDon.getMaHD()
+                + "\nTên khách hàng: " + khachHang.getTenKH()
+                + "\nNgày ra hoá đơn: " + hoaDon.getNgayRaHoaDon()
+                + "\nSố điẹn tiêu thụ: " + hoaDon.getSoLuongTieuThu()
+                + "\nĐơn giá: " + hoaDon.getDonGia()
+                + "\nThành tiền: " +  hoaDon.getThanhTien()
+        );
     }
 
 }

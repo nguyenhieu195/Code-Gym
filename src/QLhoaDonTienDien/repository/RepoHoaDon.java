@@ -25,6 +25,10 @@ public class RepoHoaDon {
         }
     }
 
+    public List<HoaDon> getListHoaDon() {
+        return listHoaDon;
+    }
+
     public HoaDon getHoaDon(int maHD) {
         for (HoaDon hd : listHoaDon) {
             if (hd.getMaHD() == maHD) {
@@ -33,7 +37,14 @@ public class RepoHoaDon {
         }
         return null;
     }
-
+    public HoaDon getHoaDonByKH(int KH) {
+        for (HoaDon hd : listHoaDon) {
+            if (hd.getMaKH() == KH) {
+                return hd;
+            }
+        }
+        return null;
+    }
     public void themHoaDon(HoaDon hoaDon) throws Exception {
         listHoaDon.add(hoaDon);
         saveToFile();
@@ -82,7 +93,7 @@ public class RepoHoaDon {
 
                 int maHD = Integer.parseInt(data[0].trim());
                 int maKH = Integer.parseInt(data[1].trim());
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
                 LocalDate ngayRaHoaDon = LocalDate.parse(data[2].trim(), dtf);
                 float soLuongTieuThu = Float.parseFloat(data[3].trim());
                 float donGia = Float.parseFloat(data[4].trim());

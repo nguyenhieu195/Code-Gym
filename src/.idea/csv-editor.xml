@@ -3,7 +3,35 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/HeThongQuanLySinhVien/data/GiangVien.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HeThongQuanLySinhVien/data/SinhVien.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/HeThongQuanLySinhVien/data/batchs.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/Project_QuizBuilder/data/account.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/Project_QuizBuilder/data/questions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -25,6 +53,13 @@
           </value>
         </entry>
         <entry key="/mvc/data/student.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/pj17_file/data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
