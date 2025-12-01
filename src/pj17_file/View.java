@@ -1,8 +1,5 @@
 package pj17_file;
 
-
-
-
 import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -10,14 +7,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class View {
-    private static final String File_Path = "pj17_file/data.csv";
+    private static final String File_Path = "pj17_file/data.dat"; // đổi CSV thành DAT
 
-    public static void writetoFile(List<QuanLySanPham> products) {
+    public static void writeToFile(List<QuanLySanPham> products) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(File_Path))) {
             oos.writeObject(products);
-            System.out.println("Ghi file thanh cong");
+            System.out.println("Ghi file thành công!");
         } catch (IOException e) {
-            System.out.println("Loi ghi file :" + e.getMessage());
+            System.out.println("Lỗi ghi file: " + e.getMessage());
         }
     }
 
@@ -26,9 +23,9 @@ public class View {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(File_Path))) {
             products = (List<QuanLySanPham>) ois.readObject();
         } catch (FileNotFoundException e) {
-
+            System.out.println("Chưa có file, tạo danh sách mới!");
         } catch (Exception e) {
-            System.out.println("Loi: " + e.getMessage());
+            System.out.println("Lỗi đọc file: " + e.getMessage());
         }
         return products;
     }
@@ -36,62 +33,76 @@ public class View {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<QuanLySanPham> list = readFromFile();
+
         while (true) {
-            System.out.println();
-            System.out.println("=======MENU=======");
-            System.out.println("1. Them san pham");
-            System.out.println("2. Hien thi san pham");
-            System.out.println("3. Tim kiem theo ma");
-            System.out.println("4. Thoat");
-            System.out.println();
-            System.out.println("=======Lua chon=======");
+            System.out.println("\n======= MENU =======");
+            System.out.println("1. Thêm sản phẩm");
+            System.out.println("2. Hiển thị sản phẩm");
+            System.out.println("3. Tìm kiếm theo mã");
+            System.out.println("4. Thoát");
+            System.out.println("====================");
+
             int choice = Integer.parseInt(sc.nextLine());
             switch (choice) {
+
                 case 1:
                     list.add(inputProduct(sc));
-                    writetoFile(list);
+                    writeToFile(list);
                     break;
+
                 case 2:
-                    System.out.printf("%-5s %-10s %-10s %-15s %-15s%n", "id", "name", "price", "manufacturer", "note");
+                    System.out.printf("%-5s %-10s %-10s %-15s %-15s%n",
+                            "ID", "Name", "Price", "Manufacturer", "Note");
+
                     for (QuanLySanPham p : list) {
                         System.out.printf("%-5d %-10s %-10.2f %-15s %-15s%n",
-                                p.getId(), p.getName(), p.getPrice(), p.getManufacturer(), p.getNote());
+                                p.getId(), p.getName(), p.getPrice(),
+                                p.getManufacturer(), p.getNote());
                     }
                     break;
+
                 case 3:
-                    System.out.println("Nhap ma :");
+                    System.out.print("Nhập mã: ");
                     int id = Integer.parseInt(sc.nextLine());
                     boolean found = false;
+
                     for (QuanLySanPham p : list) {
                         if (p.getId() == id) {
-                            System.out.println("Tim thay: " + p);
+                            System.out.println("Tìm thấy: " + p);
                             found = true;
                         }
                     }
                     if (!found) {
-                        System.out.println("Khong tim thay");
+                        System.out.println("Không tìm thấy!");
                     }
                     break;
+
                 case 4:
-                    System.out.println("Thoat");
+                    System.out.println("Thoát...");
                     return;
+
                 default:
-                    System.out.println("Vui long nhap laij");
+                    System.out.println("Lựa chọn không hợp lệ!");
             }
         }
     }
 
     private static QuanLySanPham inputProduct(Scanner sc) {
-        System.out.print("Ma San pham: ");
+        System.out.print("Mã sản phẩm: ");
         int id = Integer.parseInt(sc.nextLine());
-        System.out.print("Ten san pham: ");
+
+        System.out.print("Tên sản phẩm: ");
         String name = sc.nextLine();
-        System.out.println("Gia: ");
+
+        System.out.print("Giá: ");
         double price = Double.parseDouble(sc.nextLine());
-        System.out.println("Hang san xuat: ");
+
+        System.out.print("Hãng sản xuất: ");
         String manu = sc.nextLine();
-        System.out.println("Ghi chu: ");
+
+        System.out.print("Ghi chú: ");
         String note = sc.nextLine();
+
         return new QuanLySanPham(id, name, price, manu, note);
     }
 }
