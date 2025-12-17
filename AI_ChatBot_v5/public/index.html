@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Generator - Gemini API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Code Generator</h1>
+            <p>Tự động sinh code bằng AI - Dành cho sinh viên IT</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="card">
+                <h2>📝 Nhập Yêu Cầu</h2>
+
+                <div class="form-group">
+                    <label for="prompt">💡 Mô tả bài toán:</label>
+                    <textarea id="prompt"
+                        placeholder="Ví dụ: Viết chương trình nhân 2 số nguyên nhập từ bàn phím"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="language">🌐 Ngôn ngữ lập trình:</label>
+                    <select id="language">
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="Java" selected>Java</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="C#">C#</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Go">Go</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" id="generateBtn">
+                    ✨ Sinh Code
+                </button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-section">
+                <h2>💻 Code Được Sinh Ra</h2>
+                <div id="errorContainer"></div>
+                <div class="code-header" id="codeHeader" style="display:none;">
+                    <span class="language-badge" id="outputLanguage">Java</span>
+                    <button class="btn btn-secondary" id="copyBtn">
+                        📋 Copy Code
+                    </button>
+                </div>
+                <div class="code-block" id="codeOutput">
+                    <div style="color: #999; text-align: center; padding: 50px; font-size: 20px;">Nhập yêu cầu và nhấn "Sinh Code" để bắt đầu...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <h2>🕘 Lịch Sử Prompt & Code</h2>
+            <div class="history-list" id="historyList">
+                <div style="color: #999; text-align: center; padding: 30px;">
+                    Chưa có lịch sử nào
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

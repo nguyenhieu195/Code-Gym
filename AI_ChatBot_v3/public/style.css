@@ -1,0 +1,22 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: #fff;
+}
+
+#chat {
+  width: 400px;
+  margin: 50px auto;
+}
+
+#messages div {
+  margin: 5px 0;
+}
+
+.user {
+  color: #4caf50;
+}
+
+.bot {
+  color: #03a9f4;
+}
